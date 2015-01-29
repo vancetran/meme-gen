@@ -5776,19 +5776,38 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-#memecanvas {
-  border: 1px solid grey;
+.control-wrapper {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.color-picker {
-  display: inline-block;
-  width: 44px;
-  height: 32px;
-  background: #ccc;
-  border: 1px solid #333;
+@media (min-width: 992px) {
+  .control-wrapper {
+    float: left;
+    width: 41.66666666666667%;
+  }
 }
-.color-picker.blue {
-  background: #1295D8;
+.meme-wrapper {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.color-picker.none {
-  background: #fff;
+@media (min-width: 992px) {
+  .meme-wrapper {
+    float: left;
+    width: 58.333333333333336%;
+  }
+}
+.meme-wrapper .meme {
+  padding: 20px;
+  width: 640px;
+  height: 320px;
+  border: 1px solid #ccc;
+  background: #efefef;
+}
+.meme-wrapper .meme .caption {
+  font-size: 24px;
+  font-weight: bold;
 }
