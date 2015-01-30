@@ -5,12 +5,10 @@ MemeGen = function() {
   function init(){
     console.log("Team boo.");
 
-    html2canvas(document.body, {
+    html2canvas( $(".meme-wrapper .meme"), {
       onrendered: function(canvas) {
         document.body.appendChild(canvas);
-      },
-      width: 300,
-      height: 300
+      }
     });
   }
 
