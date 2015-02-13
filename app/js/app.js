@@ -10,6 +10,10 @@ MemeGen = function() {
         document.body.appendChild(canvas);
       }
     });
+
+    $( ".form-group input" ).keypress(function() {
+      console.log( "Handler for .keypress() called." );
+    });
   }
 
   function readURL(input) {
