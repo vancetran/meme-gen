@@ -11,8 +11,11 @@ MemeGen = function() {
       }
     });
 
-    $( ".form-group input" ).keypress(function() {
-      console.log( "Handler for .keypress() called." );
+    $( ".form-group input" ).keyup(function() {
+      var str = $( this ).val();
+      $(".meme .caption").html(str);
+
+      console.log("keypress! contents: " + str);
     });
   }
 
