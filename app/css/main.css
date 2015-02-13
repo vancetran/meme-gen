@@ -5788,6 +5788,13 @@ body {
     width: 41.66666666666667%;
   }
 }
+.control-wrapper label {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
 .meme-wrapper {
   position: relative;
   min-height: 1px;
