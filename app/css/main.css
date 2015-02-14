@@ -5788,12 +5788,22 @@ body {
     width: 41.66666666666667%;
   }
 }
-.control-wrapper label {
+.control-wrapper .caption label {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
+}
+.control-wrapper .source label {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.control-wrapper .file-input {
+  margin-bottom: 15px;
 }
 .meme-wrapper {
   position: relative;

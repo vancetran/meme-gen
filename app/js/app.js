@@ -5,18 +5,22 @@ MemeGen = function() {
   function init(){
     console.log("Team boo.");
 
-    html2canvas( $(".meme-wrapper .meme"), {
-      onrendered: function(canvas) {
-        document.body.appendChild(canvas);
-      }
-    });
+    generateCanvas();
 
-    $( ".form-group input" ).keyup(function() {
+    $( ".caption input" ).keyup(function() {
       var str = $( this ).val();
       $(".meme .caption").html(str);
-
-      console.log("keypress! contents: " + str);
     });
+
+    $( ".source input" ).keyup(function() {
+      var str = $( this ).val();
+      $(".meme .source").html(str);
+    });
+
+    $(".generate-image").click( function() {
+      generateCanvas();
+    });
+
   }
 
   function readURL(input) {
@@ -32,6 +36,15 @@ MemeGen = function() {
 
       reader.readAsDataURL(input.files[0]);
     }
+  }
+
+  function generateCanvas() {
+    html2canvas( $(".meme-wrapper .meme"), {
+      onrendered: function(canvas) {
+        $("footer").html(canvas);
+        //document.body.appendChild(canvas);
+      }
+    });
   }
 
   // Public Interface
