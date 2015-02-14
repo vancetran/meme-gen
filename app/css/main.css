@@ -5818,13 +5818,15 @@ body {
   }
 }
 .meme-wrapper .meme {
-  padding: 20px;
+  padding: 30px;
   width: 640px;
   height: 320px;
   border: 1px solid #ccc;
   background: #efefef;
 }
 .meme-wrapper .meme .caption {
+  line-height: 1.25em;
   font-size: 24px;
   font-weight: bold;
+  padding-bottom: .5em;
 }
