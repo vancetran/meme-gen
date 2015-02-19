@@ -6,7 +6,8 @@
 - [ ] Cleanup
 - [ ] Normalized grunt commands: grunt dev/build/watch
 - [ ] Live type and change text in preview
-  - [] If feeling fancy, just enter text directly on the preview itself.
+  - [] If feeling fancy, just enter text directly on the preview itself
+- [ ] Handle retina screens
 
 ## MVP
 - [ ] Normalized grunt commands: grunt dev/build/watch
@@ -24,5 +25,6 @@
 - [ ] Drop-in new image
 - [ ] Persistent Logo
 - [ ] Mobile/Touch Friendly
+
 
 [1]: http://stackoverflow.com/questions/12368910/html-display-image-after-selecting-filename

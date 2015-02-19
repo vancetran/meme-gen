@@ -5,7 +5,7 @@ MemeGen = function() {
   function init(){
     console.log("Team boo.");
 
-    generateCanvas();
+    renderImage();
 
     $( ".caption input" ).keyup(function() {
       var str = $( this ).val();
@@ -18,7 +18,7 @@ MemeGen = function() {
     });
 
     $(".generate-image").click( function() {
-      generateCanvas();
+      renderImage();
     });
 
   }
@@ -38,10 +38,19 @@ MemeGen = function() {
     }
   }
 
-  function generateCanvas() {
+  function renderImage() {
     html2canvas( $(".meme-wrapper .meme"), {
       onrendered: function(canvas) {
         $("footer").html(canvas);
+
+        // Download PNG
+        // Canvas2Image.saveAsPNG(canvas);
+
+        canvas.toBlob(function(blob) {
+          saveAs(blob, "pretty image.png");
+        });
+
+        // $("footer").html(canvas);
         //document.body.appendChild(canvas);
       }
     });
