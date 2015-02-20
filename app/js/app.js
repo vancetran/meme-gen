@@ -25,12 +25,29 @@ MemeGen = function() {
       downloadImage();
     });
 
+    colorPicker();
+
+  }
+
+  function colorPicker() {
     $("input#full-popover").ColorPickerSliders({
       placement: 'right',
       hsvpanel: true,
-      previewformat: 'hex'
-    });
+      previewformat: 'hex',
 
+      onchange: function(container, color) {
+        var target = $('#meme-window');
+
+        target.css("background-color", color.tiny.toRgbString());
+
+        if (color.cielch.l < 60) {
+            target.css("color", "white");
+        }
+        else {
+            target.css("color", "black");
+        }
+      }
+    });
   }
 
   function readURL(input) {
