@@ -39,19 +39,17 @@ MemeGen = function() {
   }
 
   function renderImage() {
-    html2canvas( $(".meme-wrapper .meme"), {
+    html2canvas( document.getElementById("meme-window"), {
       onrendered: function(canvas) {
-        $("footer").html(canvas);
+        // $("footer").html(canvas);
+
+        document.body.appendChild(canvas);
 
         // Download PNG
-        // Canvas2Image.saveAsPNG(canvas);
-
-        canvas.toBlob(function(blob) {
-          saveAs(blob, "pretty image.png");
-        });
-
-        // $("footer").html(canvas);
-        //document.body.appendChild(canvas);
+        
+        // canvas.toBlob(function(blob) {
+        //   saveAs(blob, "pretty image.png");
+        // });
       }
     });
   }
