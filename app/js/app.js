@@ -5,7 +5,7 @@ MemeGen = function() {
   function init(){
     console.log("Team boo.");
 
-    renderImage();
+    // renderImage();
 
     $( ".caption input" ).keyup(function() {
       var str = $( this ).val();
@@ -19,6 +19,10 @@ MemeGen = function() {
 
     $(".generate-image").click( function() {
       renderImage();
+    });
+
+    $(".download-image").click( function() {
+      downloadImage();
     });
 
   }
@@ -42,13 +46,17 @@ MemeGen = function() {
         // $("footer").html(canvas);
 
         document.body.appendChild(canvas);
-
-        // Download PNG
-        
-        // canvas.toBlob(function(blob) {
-        //   saveAs(blob, "pretty image.png");
-        // });
       }
+    });
+  }
+
+  function downloadImage() {
+    html2canvas( document.getElementById("meme-window"), {
+      onrendered: function(canvas) {
+        canvas.toBlob(function(blob) {
+          saveAs(blob, "dat-image.png");
+        });
+          }
     });
   }
 

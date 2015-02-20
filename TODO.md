@@ -2,33 +2,38 @@
 
 ## Top
 
+- Text styles, color and font choices
+- [Fix blurry canvas/rendered image output][3]
+- Color overlay
+- Persistent Logo, on/off
+- Text layouts. Title, credit/source
+- Cleanup
+- Normalized grunt commands: grunt dev/build/watch
+- Live type and change text in preview
+  - If feeling fancy, just enter text directly on the preview itself
+- Handle retina screens
 
-- [ ] Cleanup
-- [ ] Normalized grunt commands: grunt dev/build/watch
-- [ ] Live type and change text in preview
-  - [] If feeling fancy, just enter text directly on the preview itself
-- [ ] Handle retina screens
 
 ## MVP
-- [ ] Normalized grunt commands: grunt dev/build/watch
-- [ ] [Use html2canvas](http://www.javascriptoo.com/html2canvas)
-- [ ] Color overlay
-- [ ] Text styles
-- [ ] Image Saving
-- [ ] Text overlay
-- [ ] Image upload to background
+
+- Normalized grunt commands: grunt dev/build/watch
 
 ## Extra
-- [ ] Image transform resize/rotate
-- [ ] Text layouts. Title, credit/source
-- [ ] Size templates
-- [ ] Drop-in new image
-- [ ] Persistent Logo
-- [ ] Mobile/Touch Friendly
+
+- Size templates
+- Drop-in new image
+- Mobile/Touch Friendly
+
 
 ## Done
+
+- [Use html2canvas](http://www.javascriptoo.com/html2canvas)
+- Text overlay
+- Download Image
+- Live type and change text in preview
 - [Set uploaded image][1] to .meme's background-image, [used this solution][2]
 
 
 [1]: http://stackoverflow.com/questions/12368910/html-display-image-after-selecting-filename
 [2]: http://stackoverflow.com/questions/16312930/how-to-preview-an-uploaded-image-as-the-background-image-of-a-div
+[3]: https://github.com/niklasvh/html2canvas/issues/340
