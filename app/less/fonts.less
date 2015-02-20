@@ -1,0 +1,76 @@
+@fontPath: "../fonts/";
+@kievitPath: "@{fontPath}kievit/";
+
+// @font-face { font-family: KievitRegular; src: url("@{kievitPath}KievitWebPro.eot"); }
+// @font-face { font-family: KievitRegular; src: url("@{kievitPath}KievitWebPro.woff") format('woff'); }
+
+// Regulars
+// ========
+
+// Using Book as Regular
+@font-face {  
+  font-family: Kievit; 
+  src: url("@{kievitPath}KievitWebPro-Book.eot");
+  src: url("@{kievitPath}KievitWebPro-Book.eot?#iefix") format('embedded-opentype'), url("@{kievitPath}KievitWebPro-Book.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {  
+  font-family: Kievit; 
+  src: url("@{kievitPath}KievitWebPro-Bold.eot");
+  src: url("@{kievitPath}KievitWebPro-Bold.eot?#iefix") format('embedded-opentype'), url("@{kievitPath}KievitWebPro-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {  
+  font-family: Kievit;
+  src: url("@{kievitPath}KievitWebPro-Xbold.eot");
+  src: url("@{kievitPath}KievitWebPro-Xbold.eot?#iefix") format('embedded-opentype'), url("@{kievitPath}KievitWebPro-Xbold.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {  
+  font-family: Kievit;
+  src: url("@{kievitPath}KievitWebPro-Black.eot");
+  src: url("@{kievitPath}KievitWebPro-Black.eot?#iefix") format('embedded-opentype'), url("@{kievitPath}KievitWebPro-Black.woff") format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+// Italics
+// =======
+@font-face {  
+  font-family: Kievit; 
+  src: url("@{kievitPath}KievitWebPro-Ita.eot");
+  src: url("@{kievitPath}KievitWebPro-Ita.eot?#iefix") format('embedded-opentype'), url("@{kievitPath}KievitWebPro-Ita.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {  
+  font-family: Kievit; 
+  src: url("@{kievitPath}KievitWebPro-BoldIta.eot");
+  src: url("@{kievitPath}KievitWebPro-BoldIta.eot?#iefix") format('embedded-opentype'), url("@{kievitPath}KievitWebPro-BoldIta.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {  
+  font-family: Kievit;
+  src: url("@{kievitPath}KievitWebPro-XboldIta.eot");
+  src: url("@{kievitPath}KievitWebPro-XboldIta.eot?#iefix") format('embedded-opentype'), url("@{kievitPath}KievitWebPro-XboldIta.woff") format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {  
+  font-family: Kievit;
+  src: url("@{kievitPath}KievitWebPro-BlackIta.eot");
+  src: url("@{kievitPath}KievitWebPro-BlackIta.eot?#iefix") format('embedded-opentype'), url("@{kievitPath}KievitWebPro-BlackIta.woff") format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
+
+// Variables
+@kievit: Kievit, sans-serif;
+
+// Typography Overrides
+// @font-family-sans-serif:  @kievit;
+// @font-family-serif:       Georgia, "Times New Roman", Times, serif;

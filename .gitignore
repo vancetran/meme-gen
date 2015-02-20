@@ -2,6 +2,7 @@ node_modules
 app/bower_components
 .tmp/
 build/
+fonts/
 
 *.sublime-project
 *.sublime-workspace
