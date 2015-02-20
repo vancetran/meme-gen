@@ -5874,12 +5874,15 @@ body {
     width: 58.333333333333336%;
   }
 }
+.meme-wrapper #meme-window {
+  color: black;
+  background: #72CDF4;
+}
 .meme-wrapper .meme {
   padding: 30px;
   width: 640px;
   height: 320px;
   border: 1px solid #ccc;
-  background: #efefef;
 }
 .meme-wrapper .meme .caption {
   font-family: Kievit, sans-serif;
@@ -5887,4 +5890,8 @@ body {
   font-size: 32px;
   font-weight: bold;
   padding-bottom: .5em;
+}
+.meme-wrapper .meme .source {
+  font-family: Kievit, sans-serif;
+  font-size: 16px;
 }

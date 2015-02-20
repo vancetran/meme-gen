@@ -17,6 +17,16 @@ MemeGen = function() {
       $(".meme .source").html(str);
     });
 
+
+
+
+    // $( ".color input#full-popover" ).css(function() {
+    //   var str = $( this ).val();
+    // });
+
+
+
+
     $(".generate-image").click( function() {
       renderImage();
     });
@@ -31,9 +41,12 @@ MemeGen = function() {
 
   function colorPicker() {
     $("input#full-popover").ColorPickerSliders({
+      color: '#1295D8',
       placement: 'right',
       hsvpanel: true,
       previewformat: 'hex',
+
+
 
       onchange: function(container, color) {
         var target = $('#meme-window');
