@@ -15,6 +15,7 @@
   <!-- build:css(app) css/main.css -->
   <link href="css/main.css" rel="stylesheet">
   <!-- endbuild -->
+  <link href="bower_components/bootstrap-colorpickersliders/dist/bootstrap.colorpickersliders.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -34,23 +35,31 @@
 
       <div class="control-wrapper">
         <form role="form">
+
           <div class="caption">
             <label for="caption">Caption</label>
             <input type="text" class="form-control" id="caption" value="If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward." placeholder="Caption">
           </div>
+
           <div class="source">
             <label for="source">Source</label>
             <input type="text" class="form-control" id="source" value="Martin Luther King Jr." placeholder="Source">
           </div>
+
           <div class="file-input">
-            <label for="exampleInputFile">Background</label>
+            <label for="exampleInputFile">Background Image</label>
             <input type="file" id="exampleInputFile" onchange="MemeGen.readURL(this);">
           </div>
-          <button type="button" class="btn btn-primary download-image">Download Image</button>
+
+          <div class="color">
+            <label for="exampleInputFile">Colors</label>
+            <input type="text" class="form-control" id="full-popover" value="#A6FF00" data-color-format="hex">
+          </div>
+          
 
           <hr>
-
-          <button type="button" class="btn btn-primary generate-image">Generate Image</button>
+          <button type="button" class="btn btn-primary download-image">Download Image</button>
+          <button type="button" class="btn btn-primary generate-image">Append Image</button>
         </form>
       </div>
 
@@ -79,7 +88,11 @@
   <script src="bower_components/html2canvas/build/html2canvas.js"></script>
   <script src="bower_components/FileSaver/FileSaver.js"></script>
   <script src="bower_components/canvas-toBlob.js/canvas-toBlob.js"></script>
+  <script src="bower_components/tinycolor/tinycolor.js"></script>
   <!-- endbower -->
+  <script src="bower_components/bootstrap/js/tooltip.js"></script>
+  <script src="bower_components/bootstrap/js/popover.js"></script>
+  <script src="bower_components/bootstrap-colorpickersliders/dist/bootstrap.colorpickersliders.js"></script>
 
   <script src="js/app.js"></script>
 

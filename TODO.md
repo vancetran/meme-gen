@@ -2,37 +2,36 @@
 
 ## Top
 
-- Color, font families and sizes
-- [Fix blurry canvas/rendered image output][3]
-- Color overlay
-  - Use [Bootstrap color picker][5] and [tinycolor][4] 
-- Persistent Logo, on/off
-- Text layouts. Title, credit/source
-- Cleanup
-- Normalized grunt commands: grunt dev/build/watch
-- Live type and change text in preview
-  - If feeling fancy, just enter text directly on the preview itself
-- Handle retina screens
-
+* Color, font families and sizes
+* [Fix blurry canvas/rendered image output][3]
+* Color overlay
+  * Use [Bootstrap color picker][5] and [tinycolor][4] 
+* Persistent Logo, on/off
+* Text layouts. Title, credit/source
+* Cleanup
+* Normalized grunt commands: grunt dev/build/watch
+* Live type and change text in preview
+  * If feeling fancy, just enter text directly on the preview itself
+* Handle retina screens
 
 ## MVP
 
-- Normalized grunt commands: grunt dev/build/watch
+* Normalized grunt commands: grunt dev/build/watch
 
 ## Extra
 
-- Size templates
-- Drop-in new image
-- Mobile/Touch Friendly
+* Size templates
+* Drop-in new image
+* Mobile/Touch Friendly
 
 
 ## Done
 
-- [Use html2canvas](http://www.javascriptoo.com/html2canvas)
-- Text overlay
-- Download Image
-- Live type and change text in preview
-- [Set uploaded image][1] to .meme's background-image, [used this solution][2]
+* [Use html2canvas](http://www.javascriptoo.com/html2canvas)
+* Text overlay
+* Download Image
+* Live type and change text in preview
+* [Set uploaded image][1] to .meme's background-image, [used this solution][2]
 
 
 [1]: http://stackoverflow.com/questions/12368910/html-display-image-after-selecting-filename

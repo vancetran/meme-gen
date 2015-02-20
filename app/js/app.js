@@ -25,6 +25,12 @@ MemeGen = function() {
       downloadImage();
     });
 
+    $("input#full-popover").ColorPickerSliders({
+      placement: 'right',
+      hsvpanel: true,
+      previewformat: 'hex'
+    });
+
   }
 
   function readURL(input) {
