@@ -2,7 +2,7 @@
 
 ## Top
 
-- [ ] [Set uploaded image][1] to .meme's background-image
+
 - [ ] Cleanup
 - [ ] Normalized grunt commands: grunt dev/build/watch
 - [ ] Live type and change text in preview
@@ -26,5 +26,9 @@
 - [ ] Persistent Logo
 - [ ] Mobile/Touch Friendly
 
+## Done
+- [Set uploaded image][1] to .meme's background-image, [used this solution][2]
+
 
 [1]: http://stackoverflow.com/questions/12368910/html-display-image-after-selecting-filename
+[2]: http://stackoverflow.com/questions/16312930/how-to-preview-an-uploaded-image-as-the-background-image-of-a-div

@@ -28,10 +28,8 @@ MemeGen = function() {
       var reader = new FileReader();
 
       reader.onload = function (e) {
-        $('#blah')
-        .attr('src', e.target.result)
-        .width(150)
-        .height(200);
+        $('#meme-window')
+          .css('background', 'transparent url('+e.target.result +') left top no-repeat');
       };
 
       reader.readAsDataURL(input.files[0]);
