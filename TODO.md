@@ -2,9 +2,10 @@
 
 ## Top
 
-- Text styles, color and font choices
+- Color, font families and sizes
 - [Fix blurry canvas/rendered image output][3]
 - Color overlay
+  - Use [Bootstrap color picker][5] and [tinycolor][4] 
 - Persistent Logo, on/off
 - Text layouts. Title, credit/source
 - Cleanup
@@ -37,3 +38,5 @@
 [1]: http://stackoverflow.com/questions/12368910/html-display-image-after-selecting-filename
 [2]: http://stackoverflow.com/questions/16312930/how-to-preview-an-uploaded-image-as-the-background-image-of-a-div
 [3]: https://github.com/niklasvh/html2canvas/issues/340
+[4]: http://bgrins.github.io/TinyColor/
+[5]: http://www.virtuosoft.eu/code/bootstrap-colorpickersliders/
