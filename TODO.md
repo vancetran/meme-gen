@@ -6,7 +6,7 @@
 - [ ] Cleanup
 - [ ] Normalized grunt commands: grunt dev/build/watch
 - [ ] Live type and change text in preview
-  - [] If feeling fancy, just enter text directly on the preview itself.
+  - [ ] If feeling fancy, just enter text directly on the preview itself.
 
 ## MVP
 - [ ] Normalized grunt commands: grunt dev/build/watch
