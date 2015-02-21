@@ -5772,6 +5772,62 @@ button.close {
     display: none !important;
   }
 }
+@font-face {
+  font-family: Kievit;
+  src: url("../fonts/kievit/KievitWebPro-Book.eot");
+  src: url("../fonts/kievit/KievitWebPro-Book.eot?#iefix") format('embedded-opentype'), url("../fonts/kievit/KievitWebPro-Book.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Kievit;
+  src: url("../fonts/kievit/KievitWebPro-Bold.eot");
+  src: url("../fonts/kievit/KievitWebPro-Bold.eot?#iefix") format('embedded-opentype'), url("../fonts/kievit/KievitWebPro-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Kievit;
+  src: url("../fonts/kievit/KievitWebPro-Xbold.eot");
+  src: url("../fonts/kievit/KievitWebPro-Xbold.eot?#iefix") format('embedded-opentype'), url("../fonts/kievit/KievitWebPro-Xbold.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Kievit;
+  src: url("../fonts/kievit/KievitWebPro-Black.eot");
+  src: url("../fonts/kievit/KievitWebPro-Black.eot?#iefix") format('embedded-opentype'), url("../fonts/kievit/KievitWebPro-Black.woff") format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Kievit;
+  src: url("../fonts/kievit/KievitWebPro-Ita.eot");
+  src: url("../fonts/kievit/KievitWebPro-Ita.eot?#iefix") format('embedded-opentype'), url("../fonts/kievit/KievitWebPro-Ita.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: Kievit;
+  src: url("../fonts/kievit/KievitWebPro-BoldIta.eot");
+  src: url("../fonts/kievit/KievitWebPro-BoldIta.eot?#iefix") format('embedded-opentype'), url("../fonts/kievit/KievitWebPro-BoldIta.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: Kievit;
+  src: url("../fonts/kievit/KievitWebPro-XboldIta.eot");
+  src: url("../fonts/kievit/KievitWebPro-XboldIta.eot?#iefix") format('embedded-opentype'), url("../fonts/kievit/KievitWebPro-XboldIta.woff") format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: Kievit;
+  src: url("../fonts/kievit/KievitWebPro-BlackIta.eot");
+  src: url("../fonts/kievit/KievitWebPro-BlackIta.eot?#iefix") format('embedded-opentype'), url("../fonts/kievit/KievitWebPro-BlackIta.woff") format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -5788,6 +5844,24 @@ body {
     width: 41.66666666666667%;
   }
 }
+.control-wrapper .caption label {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.control-wrapper .source label {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.control-wrapper .file-input {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
 .meme-wrapper {
   position: relative;
   min-height: 1px;
@@ -5800,14 +5874,24 @@ body {
     width: 58.333333333333336%;
   }
 }
+.meme-wrapper #meme-window {
+  color: black;
+  background: #72CDF4;
+}
 .meme-wrapper .meme {
-  padding: 20px;
+  padding: 30px;
   width: 640px;
   height: 320px;
   border: 1px solid #ccc;
-  background: #efefef;
 }
 .meme-wrapper .meme .caption {
-  font-size: 24px;
+  font-family: Kievit, sans-serif;
+  line-height: 1.25em;
+  font-size: 32px;
   font-weight: bold;
+  padding-bottom: .5em;
+}
+.meme-wrapper .meme .source {
+  font-family: Kievit, sans-serif;
+  font-size: 16px;
 }

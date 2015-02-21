@@ -5,9 +5,60 @@ MemeGen = function() {
   function init(){
     console.log("Team boo.");
 
-    html2canvas( $(".meme-wrapper .meme"), {
-      onrendered: function(canvas) {
-        document.body.appendChild(canvas);
+    // renderImage();
+
+    $( ".caption input" ).keyup(function() {
+      var str = $( this ).val();
+      $(".meme .caption").html(str);
+    });
+
+    $( ".source input" ).keyup(function() {
+      var str = $( this ).val();
+      $(".meme .source").html(str);
+    });
+
+
+
+
+    // $( ".color input#full-popover" ).css(function() {
+    //   var str = $( this ).val();
+    // });
+
+
+
+
+    $(".generate-image").click( function() {
+      renderImage();
+    });
+
+    $(".download-image").click( function() {
+      downloadImage();
+    });
+
+    colorPicker();
+
+  }
+
+  function colorPicker() {
+    $("input#full-popover").ColorPickerSliders({
+      color: '#1295D8',
+      placement: 'right',
+      hsvpanel: true,
+      previewformat: 'hex',
+
+
+
+      onchange: function(container, color) {
+        var target = $('#meme-window');
+
+        target.css("background-color", color.tiny.toRgbString());
+
+        if (color.cielch.l < 60) {
+            target.css("color", "white");
+        }
+        else {
+            target.css("color", "black");
+        }
       }
     });
   }
@@ -17,14 +68,32 @@ MemeGen = function() {
       var reader = new FileReader();
 
       reader.onload = function (e) {
-        $('#blah')
-        .attr('src', e.target.result)
-        .width(150)
-        .height(200);
+        $('#meme-window')
+          .css('background', 'transparent url('+e.target.result +') left top no-repeat');
       };
 
       reader.readAsDataURL(input.files[0]);
     }
+  }
+
+  function renderImage() {
+    html2canvas( document.getElementById("meme-window"), {
+      onrendered: function(canvas) {
+        // $("footer").html(canvas);
+
+        document.body.appendChild(canvas);
+      }
+    });
+  }
+
+  function downloadImage() {
+    html2canvas( document.getElementById("meme-window"), {
+      onrendered: function(canvas) {
+        canvas.toBlob(function(blob) {
+          saveAs(blob, "dat-image.png");
+        });
+          }
+    });
   }
 
   // Public Interface

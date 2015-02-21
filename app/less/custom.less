@@ -5,21 +5,54 @@ body {
 
 .control-wrapper {
   .make-md-column(5);
+
+  .caption {
+    label { .text-hide; }
+  }
+
+  .source {
+    label { .text-hide; }
+  }
+
+  .file-input {
+    .form-group;
+    margin-top: 20px;
+  }
+
+  .color-input {
+
+  }
+
 }
+
 .meme-wrapper {
   .make-md-column(7);
 
+  #meme-window {
+    color: black;
+    background: #72CDF4;
+  }
+
   .meme {
-    padding: 20px;
+    padding: 30px;
     width: 640px;
     height: 320px;
     border: 1px solid #ccc;
-    background: #efefef;
+    
 
+    .caption, .source {
+    }
     .caption {
-      font-size: 24px;
+      font-family: @kievit;
+      line-height: 1.25em;
+      font-size: 32px;
       font-weight: bold;
+      padding-bottom: .5em;
+    }
 
+    .source {
+      font-family: @kievit;
+      font-size: 16px;
     }
   }
 }
