@@ -5877,6 +5877,7 @@ body {
 .meme-wrapper #meme-window {
   color: black;
   background: #72CDF4;
+  background-size: cover;
 }
 .meme-wrapper .meme {
   padding: 30px;

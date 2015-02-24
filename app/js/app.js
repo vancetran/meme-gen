@@ -69,7 +69,9 @@ MemeGen = function() {
 
       reader.onload = function (e) {
         $('#meme-window')
-          .css('background', 'transparent url('+e.target.result +') left top no-repeat');
+          .css('background-image', 'url('+e.target.result +')')
+          .css('background-position', 'center center')
+          .css('background-color', 'transparent');
       };
 
       reader.readAsDataURL(input.files[0]);
