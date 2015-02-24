@@ -4,7 +4,7 @@
 
 * Color, font families and sizes
 * [Fix blurry canvas/rendered image output][3]
-* Color overlay
+* Color overlay/Photo Filters
   * Use [Bootstrap color picker][5] and [tinycolor][4]
 * Persistent Logo, on/off
 * Text layouts. Title, credit/source

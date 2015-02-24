@@ -4,7 +4,9 @@ module.exports = {
       // Copy just the index.html
       { src: '<%= appconfig.src %>/index.html', dest: '<%= appconfig.dest %>/index.html', filter: 'isFile' },
       // Copy un-minified production JS
-      { src: '.tmp/concat/js/production-min.js', dest: '<%= appconfig.dest %>/js/production.js', filter: 'isFile' }
+      { src: '.tmp/concat/js/production-min.js', dest: '<%= appconfig.dest %>/js/production.js', filter: 'isFile' },
+      // Copy fonts folder
+      { expand: true, cwd: '<%= appconfig.src %>/fonts/', src: ['**'], dest: '<%= appconfig.dest %>/fonts/' }
     ]
   }
 };

@@ -25,5 +25,8 @@ module.exports = {
 	],
 	dev: [
 		'watch'
+	],
+	build: [
+		'default'
 	]
 };
