@@ -35,13 +35,17 @@ MemeGen = function() {
       downloadImage();
     });
 
-    colorPicker();
+    colorPicker($("#control-wrapper .background-color"), $('#meme-window'), "background-color");
+
+    colorPicker($("#control-wrapper .text-color"), $('#meme-window .caption'), "color");
+
+    // colorPicker($("#control-wrapper .text-color"), $('#meme-window .source'), "color");
 
   }
 
-  function colorPicker() {
-    $("input.background-color").ColorPickerSliders({
-      color: '#1295D8',
+  function colorPicker( picker, target, cssProperty ) {
+    picker.ColorPickerSliders({
+      // color: '#1295D8',
       placement: 'right',
       hsvpanel: true,
       previewformat: 'hex',
@@ -49,16 +53,25 @@ MemeGen = function() {
 
 
       onchange: function(container, color) {
-        var target = $('#meme-window');
 
-        target.css("background-color", color.tiny.toRgbString());
+        //var targetText = $('#control-wrapper .text-color');
 
-        if (color.cielch.l < 60) {
-            target.css("color", "white");
-        }
-        else {
-            target.css("color", "black");
-        }
+        target.css(cssProperty, color.tiny.toHexString());
+
+        //var currentColorText = target.css('color');
+        //console.log(currentColorText);
+
+        //targetText.val(currentColorText.tiny.toHexString());
+
+
+        // if (color.cielch.l < 60) {
+        //     target.css("color", "white");
+        // }
+        // else {
+        //     target.css("color", "black");
+        // }
+
+
       }
     });
   }

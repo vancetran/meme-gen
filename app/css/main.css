@@ -5832,67 +5832,67 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.control-wrapper {
+#control-wrapper {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  .control-wrapper {
+  #control-wrapper {
     float: left;
     width: 41.66666666666667%;
   }
 }
-.control-wrapper .caption label {
+#control-wrapper .caption label {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
 }
-.control-wrapper .source label {
+#control-wrapper .source label {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
 }
-.control-wrapper .file-input {
+#control-wrapper .file-input {
   margin-bottom: 15px;
   margin-top: 20px;
 }
-.meme-wrapper {
+#meme-wrapper {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  .meme-wrapper {
+  #meme-wrapper {
     float: left;
     width: 58.333333333333336%;
   }
 }
-.meme-wrapper #meme-window {
+#meme-wrapper #meme-window {
   color: black;
   background: #72CDF4;
   background-size: cover;
 }
-.meme-wrapper .meme {
+#meme-wrapper .meme {
   padding: 30px;
   width: 640px;
   height: 320px;
   border: 1px solid #ccc;
 }
-.meme-wrapper .meme .caption {
+#meme-wrapper .meme .caption {
   font-family: Kievit, sans-serif;
   line-height: 1.25em;
   font-size: 32px;
   font-weight: bold;
   padding-bottom: .5em;
 }
-.meme-wrapper .meme .source {
+#meme-wrapper .meme .source {
   font-family: Kievit, sans-serif;
   font-size: 16px;
 }
