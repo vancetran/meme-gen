@@ -40,7 +40,7 @@ MemeGen = function() {
   }
 
   function colorPicker() {
-    $("input#full-popover").ColorPickerSliders({
+    $("input.background-color").ColorPickerSliders({
       color: '#1295D8',
       placement: 'right',
       hsvpanel: true,
