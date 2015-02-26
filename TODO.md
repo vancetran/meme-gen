@@ -2,14 +2,15 @@
 
 ## Top
 
-* Color, font families and sizes
+* Color input
+  * Overlay, default to 50% opacity, set constraints on opacity (10-90%)
+  * Text color, to override auto-color from [Bootstrap color picker][5]
+* font families and sizes
 * [Fix blurry canvas/rendered image output][3]
-* Color overlay/Photo Filters
-  * Use [Bootstrap color picker][5] and [tinycolor][4]
 * Persistent Logo, on/off
 * Text layouts. Title, credit/source
 * Cleanup
-* Normalized grunt commands: grunt dev/build/watch
+
 * Live type and change text in preview
   * If feeling fancy, just enter text directly on the preview itself
 * Handle retina screens
@@ -27,6 +28,9 @@
 
 ## Done
 
+* Color input
+  * Background (auto changes text color for legibility)
+* Normalized grunt commands: grunt dev/build/watch
 * [Use html2canvas](http://www.javascriptoo.com/html2canvas)
 * Text overlay
 * Download Image
