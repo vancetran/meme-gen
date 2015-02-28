@@ -5606,7 +5606,9 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+#control-wrapper .color-input:before,
+#control-wrapper .color-input:after {
   content: " ";
   display: table;
 }
@@ -5623,7 +5625,8 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+#control-wrapper .color-input:after {
   clear: both;
 }
 .center-block {
@@ -5861,6 +5864,22 @@ body {
 #control-wrapper .file-input {
   margin-bottom: 15px;
   margin-top: 20px;
+}
+#control-wrapper .color-input {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#control-wrapper .color-input .group {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #control-wrapper .color-input .group {
+    float: left;
+    width: 50%;
+  }
 }
 #meme-wrapper {
   position: relative;
