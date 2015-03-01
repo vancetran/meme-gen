@@ -15,16 +15,11 @@
   * If feeling fancy, just enter text directly on the preview itself
 * Handle retina screens
 
-## MVP
-
-* Normalized grunt commands: grunt dev/build/watch
-
 ## Extra
-
 * Size templates
 * Drop-in new image
 * Mobile/Touch Friendly
-
+* Try Gulp build process
 
 ## Done
 
