@@ -5915,6 +5915,7 @@ body {
   padding-bottom: .5em;
 }
 #meme-wrapper .meme .source {
+  color: #fff;
   font-family: Kievit, sans-serif;
   font-size: 16px;
 }

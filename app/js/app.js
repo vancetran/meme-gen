@@ -55,7 +55,7 @@ MemeGen = function() {
   function colorPicker( picker, target, cssProperty ) {
     picker.ColorPickerSliders({
       // color: '#1295D8',
-      placement: 'right',
+      placement: 'auto bottom',
       hsvpanel: true,
       previewformat: 'hex',
       swatches: swatchCombined,
