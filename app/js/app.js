@@ -105,7 +105,6 @@ MemeGen = function() {
     html2canvas( document.getElementById("meme-window"), {
       onrendered: function(canvas) {
         // $("footer").html(canvas);
-
         document.body.appendChild(canvas);
       }
     });
@@ -120,6 +119,14 @@ MemeGen = function() {
           }
     });
   }
+
+  function retinaSize() {
+    $('#meme-window')
+      .css('transform', 'scale(2, 2)')
+      .css('width', '1280px')
+      .css('height', '640px');
+  }
+
 
   // Public Interface
   return {
