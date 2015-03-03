@@ -58,12 +58,14 @@ MemeGen = function() {
       hsvpanel: true,
       previewformat: 'hex',
       swatches: swatchCombined,
+      customswatches: false,
+      sliders: false,
 
       onchange: function(container, color) {
 
         //var targetText = $('#control-wrapper .text-color');
 
-        target.css(cssProperty, color.tiny.toHexString());
+        target.css(cssProperty, color.tiny.toRgbString());
 
         //var currentColorText = target.css('color');
         //console.log(currentColorText);
