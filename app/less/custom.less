@@ -23,6 +23,7 @@ body {
     .make-row();
     .group {
       .make-sm-column(6);
+      margin-bottom: 15px;
     }
   }
 
@@ -45,25 +46,34 @@ body {
     padding: 30px;
     width: 640px;
     height: 320px;
-    // transform: scale(2, 2);
-    // border: 1px solid #ccc;
     
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0);
+      z-index: 3;
+    }
 
     .caption, .source {
-    }
-    .caption {
       color: #fff;
       font-family: @kievit;
+    }
+    .caption {
+      position: relative;
       line-height: 1.25em;
       font-size: 32px;
       font-weight: bold;
       padding-bottom: .5em;
+      z-index: 10;
     }
 
     .source {
-      color: #fff;
-      font-family: @kievit;
+      position: relative;
       font-size: 16px;
+      z-index: 10;
     }
   }
 }
