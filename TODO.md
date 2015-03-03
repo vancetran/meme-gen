@@ -2,19 +2,21 @@
 
 ## Top
 
-* font families and sizes
+* Customize filename for image download
+* Font families and sizes
 * Persistent Logo, on/off
 * Text layouts. Title, credit/source
   * Centered, left, right / top or bottom aligned
 * Cleanup
-* Direct entry into the preview itself
-* [Handle retina screens][6]
 
 ## Extra
+
+* Twitter login/post
 * Size templates
-* Drop-in new image
+* [Handle retina screens][6]
 * Mobile/Touch Friendly
 * Try Gulp build process
+* Direct entry into the preview itself
 
 ## Done
 
@@ -29,6 +31,7 @@
 * Text overlay
 * Download Image
 * Live type and change text in preview
+* Drop-in new image
 * [Set uploaded image][1] to .meme's background-image, [used this solution][2]
 
 
