@@ -5894,6 +5894,9 @@ body {
   }
 }
 #meme-wrapper #meme-window {
+  position: absolute;
+  top: 20px;
+  right: 25px;
   color: black;
   background: #72CDF4;
   background-size: cover;
