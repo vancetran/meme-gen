@@ -46,6 +46,7 @@ MemeGen = function() {
     colorPicker($("#control-wrapper .background-color"), $('#meme-window'), "background-color");
 
     colorPicker($("#control-wrapper .text-color"), $('#meme-window .caption'), "color");
+    colorPicker($("#control-wrapper .source-color"), $('#meme-window .source'), "color");
 
     // colorPicker($("#control-wrapper .text-color"), $('#meme-window .source'), "color");
 
