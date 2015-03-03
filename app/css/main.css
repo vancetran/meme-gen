@@ -5905,6 +5905,7 @@ body {
   border: 1px solid #ccc;
 }
 #meme-wrapper .meme .caption {
+  color: #fff;
   font-family: Kievit, sans-serif;
   line-height: 1.25em;
   font-size: 32px;
