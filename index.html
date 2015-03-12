@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../assets/ico/favicon.ico">
+
+  <title>Meme Gen</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <h1>Meme Generator</h1>
+    <p>Yet another one.</p>
+
+    <div class="row">
+
+      <div id="control-wrapper">
+        <form role="form">
+
+          <div class="caption">
+            <label for="caption">Caption</label>
+            <input type="text" class="form-control" id="caption" value="If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward." placeholder="Caption">
+          </div>
+
+          <div class="source">
+            <label for="source">Source</label>
+            <input type="text" class="form-control" id="source" value="Martin Luther King Jr." placeholder="Source">
+          </div>
+
+          <div class="file-input">
+            <label for="exampleInputFile">Background Image</label>
+            <input type="file" id="exampleInputFile" onchange="MemeGen.readURL(this);">
+          </div>
+
+          <div class="color-input">
+
+            <div class="group">
+              <label for="exampleInputFile">Background Color</label>
+              <input type="text" class="background-color form-control" id="full-popover" value="#72CDF4" data-color-format="hex">
+            </div>
+            <div class="group">
+              <label for="exampleInputFile">Text Color</label>
+              <input type="text" class="text-color form-control" id="full-popover" value="#fff" data-color-format="hex">
+            </div>
+
+            <div class="group">
+              <label for="exampleInputFile">Source Color</label>
+              <input type="text" class="source-color form-control" id="full-popover" value="#fff" data-color-format="hex">
+            </div>
+            <div class="group">
+              <label for="exampleInputFile">Overlay Color</label>
+              <input type="text" class="overlay-color form-control" id="full-popover" value="rgba(0,0,0,0)" data-color-format="rgb">
+            </div>
+          </div>
+          
+
+          <hr>
+          <button type="button" class="btn btn-primary download-image">Download Image</button>
+          <button type="button" class="btn btn-primary generate-image">Append Image</button>
+        </form>
+      </div>
+
+      <div id="meme-wrapper">
+        <strong>Preview</strong>
+
+        <div id="meme-window" class="meme">
+          <div class="overlay"></div>
+          <div class="caption">If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward.</div>
+          <div class="source">Martin Luther King Jr.</div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <hr>
+
+    <footer>
+    </footer>
+  </div> <!-- /container -->
+
+  <script src="js/production.min.js"></script>
+
+</body>
+</html>
