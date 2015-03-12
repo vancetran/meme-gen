@@ -28,5 +28,8 @@ module.exports = {
 	],
 	build: [
 		'default'
+	],
+	publish: [
+		'gh-pages'
 	]
 };
