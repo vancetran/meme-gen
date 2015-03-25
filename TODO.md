@@ -2,6 +2,8 @@
 
 ## Top
 
+* Render at 2x "retina" by default. Twitter, et al will scale as needed [Handle retina screens][6]
+  - Will need to redo the layout as a result
 * Customize filename for image download
 * Font families and sizes
 * Persistent Logo, on/off
@@ -13,7 +15,7 @@
 
 * Twitter login/post
 * Size templates
-* [Handle retina screens][6]
+
 * Mobile/Touch Friendly
 * Try Gulp build process
 * Direct entry into the preview itself
