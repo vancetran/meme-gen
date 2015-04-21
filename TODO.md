@@ -4,6 +4,7 @@
 
 * Render at 2x "retina" by default. Twitter, et al will scale as needed [Handle retina screens][6]
   - Will need to redo the layout as a result
+  - Note: Twitter dimensions, 1024 x 512 expanded, 506 x 253 collapsed
 * Customize filename for image download
 * Font families and sizes
 * Persistent Logo, on/off
