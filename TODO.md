@@ -2,14 +2,12 @@
 
 ## Top
 
-* Render at 2x "retina" by default. Twitter, et al will scale as needed [Handle retina screens][6]
-  - Will need to redo the layout as a result
-  - Note: Twitter dimensions, 1024 x 512 expanded, 506 x 253 collapsed
 * Customize filename for image download
 * Font families and sizes
 * Persistent Logo, on/off
 * Text layouts. Title, credit/source
-  * Centered, left, right / top or bottom aligned
+  - Centered, left, right / top or bottom aligned
+* Find way to render output at 2x "retina"
 * Cleanup
 
 ## Extra
@@ -21,8 +19,37 @@
 * Try Gulp build process
 * Direct entry into the preview itself
 
+## Patch
+* Blurry output fix, need to patch html2canvas.js. Need to do this on each new dev env :-/
+* [Math.floor to fix half pixels](https://github.com/niklasvh/html2canvas/issues/576)
+
+```javascript
+exports.getBounds = function(node) {
+    if (node.getBoundingClientRect) {
+        var clientRect = node.getBoundingClientRect();
+        var width = node.offsetWidth == null ? clientRect.width : node.offsetWidth;
+        return {
+            top: Math.floor(clientRect.top),
+            bottom: Math.floor(clientRect.bottom || (clientRect.top + clientRect.height)),
+            right: Math.floor(clientRect.left + width),
+            left: Math.floor(clientRect.left),
+            width:  width,
+            height: node.offsetHeight == null ? clientRect.height : node.offsetHeight
+        };
+    }
+    return {};
+};
+```
+
+## Shelved
+
+* Render at 2x "retina" by default. Twitter, et al will scale as needed [Handle retina screens][6]
+  - Will need to redo the layout as a result
+  - Note: Twitter dimensions, 1024 x 512 expanded, 506 x 253 collapsed
+
 ## Done
 
+* Overlay Color onClick should set alpha to 0.5
 * [Fix blurry canvas/rendered image output][3]
   * position meme container absolutely by at least two positional properties
 * Color input

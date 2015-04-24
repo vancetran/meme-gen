@@ -33,7 +33,9 @@ MemeGen = function() {
     // });
 
 
-
+    $("input.overlay-color").one("click", function() {
+      $(this).trigger("colorpickersliders.updateColor", "rgba(0,0,0,0.5)");
+    });
 
     $(".generate-image").click( function() {
       renderImage();
