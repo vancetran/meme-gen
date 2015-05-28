@@ -5903,7 +5903,7 @@ body {
   background-size: cover;
 }
 #meme-wrapper .meme {
-  padding: 30px;
+  padding: 20px;
   width: 640px;
   height: 320px;
 }
@@ -5923,14 +5923,28 @@ body {
 }
 #meme-wrapper .meme .caption {
   position: relative;
-  line-height: 1.25em;
+  line-height: 1.2em;
   font-size: 32px;
   font-weight: bold;
-  padding-bottom: .5em;
+  padding-bottom: .25em;
   z-index: 10;
 }
 #meme-wrapper .meme .source {
   position: relative;
   font-size: 16px;
   z-index: 10;
+}
+#meme-wrapper .meme .alignment.top {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: auto;
+}
+#meme-wrapper .meme .alignment.bottom {
+  position: absolute;
+  top: auto;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
 }

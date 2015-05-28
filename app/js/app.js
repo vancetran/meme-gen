@@ -56,19 +56,13 @@ MemeGen = (function() {
     });
     $(".ac-top").click( function(e) {
       e.preventDefault();
-      $(".meme .caption-group").css("position","absolute");
-      $(".meme .caption-group").css("top","20px");
-      $(".meme .caption-group").css("left","20px");
-      $(".meme .caption-group").css("right","20px");
-      $(".meme .caption-group").css("bottom","auto");
+      $(".meme .caption-group").removeClass("alignment bottom");
+      $(".meme .caption-group").addClass("alignment top");
     });
     $(".ac-bottom").click( function(e) {
       e.preventDefault();
-      $(".meme .caption-group").css("position","absolute");
-      $(".meme .caption-group").css("top","auto");
-      $(".meme .caption-group").css("bottom","20px");
-      $(".meme .caption-group").css("left","20px");
-      $(".meme .caption-group").css("right","20px");
+      $(".meme .caption-group").removeClass("alignment top");
+      $(".meme .caption-group").addClass("alignment bottom");
     });
 
     // Color picker binding
