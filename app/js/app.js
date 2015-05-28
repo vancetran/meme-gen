@@ -1,6 +1,6 @@
 var MemeGen = MemeGen || {};
 
-MemeGen = function() {
+MemeGen = (function() {
 
   var swatches = {
     grayscaleSimple: ["black", "#333", "#666", "#ccc", "white"],
@@ -11,7 +11,6 @@ MemeGen = function() {
   var swatchCombined = swatches.grayscaleSimple.concat(swatches.ucBrandColors);
 
   function init(){
-    console.log("Team boo.");
 
     // renderImage();
 
@@ -24,9 +23,6 @@ MemeGen = function() {
       var str = $( this ).val();
       $(".meme .source").html(str);
     });
-
-
-
 
     // $( ".color input#full-popover" ).css(function() {
     //   var str = $( this ).val();
@@ -45,8 +41,38 @@ MemeGen = function() {
       downloadImage();
     });
 
-    colorPicker($("#control-wrapper .background-color"), $('#meme-window'), "background-color");
+    // Text Alignment
+    $(".ac-left").click( function(e) {
+      e.preventDefault();
+      $(".meme .caption, .meme .source").css("text-align","left");
+    });
+    $(".ac-center").click( function(e) {
+      e.preventDefault();
+      $(".meme .caption, .meme .source").css("text-align","center");
+    });
+    $(".ac-right").click( function(e) {
+      e.preventDefault();
+      $(".meme .caption, .meme .source").css("text-align","right");
+    });
+    $(".ac-top").click( function(e) {
+      e.preventDefault();
+      $(".meme .caption-group").css("position","absolute");
+      $(".meme .caption-group").css("top","20px");
+      $(".meme .caption-group").css("left","20px");
+      $(".meme .caption-group").css("right","20px");
+      $(".meme .caption-group").css("bottom","auto");
+    });
+    $(".ac-bottom").click( function(e) {
+      e.preventDefault();
+      $(".meme .caption-group").css("position","absolute");
+      $(".meme .caption-group").css("top","auto");
+      $(".meme .caption-group").css("bottom","20px");
+      $(".meme .caption-group").css("left","20px");
+      $(".meme .caption-group").css("right","20px");
+    });
 
+    // Color picker binding
+    colorPicker($("#control-wrapper .background-color"), $('#meme-window'), "background-color");
     colorPicker($("#control-wrapper .text-color"), $('#meme-window .caption'), "color");
     colorPicker($("#control-wrapper .source-color"), $('#meme-window .source'), "color");
     colorPicker($("#control-wrapper .overlay-color"), $('#meme-window .overlay'), "background-color");
@@ -137,6 +163,6 @@ MemeGen = function() {
     readURL: readURL
   };
 
-}();
+}());
 
 MemeGen.init();
