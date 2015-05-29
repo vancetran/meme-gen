@@ -2,18 +2,25 @@ var MemeGen = MemeGen || {};
 
 MemeGen = (function() {
 
+  var config = {
+  };
+
   var quotes = [
     {
       source: "Taylor Swift",
       quote: "Just shake it off."
     },
     {
-      source: "Martin Luther King, Jr.",
-      quote: "If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward."
+      source: "Beyonce",
+      quote: "I woke up like this."
     },
     {
-      source: "Jay Z",
-      quote: "I'm far from being god, but I work god damn hard."
+      source: "Drake",
+      quote: "Started from the bottom, now we're here."
+    },
+    {
+      source: "Martin Luther King, Jr.",
+      quote: "If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward."
     },
     {
       source: "Neil deGrasse Tyson",
@@ -32,8 +39,8 @@ MemeGen = (function() {
   function init(){
 
     randomQuote();
+    spinnerInit();
 
-    // renderImage();
 
     $( ".caption input" ).keyup(function() {
       var str = $( this ).val();
@@ -62,12 +69,7 @@ MemeGen = (function() {
       downloadImage();
     });
 
-
-
-
-
     // Text Alignment
-
     $(".text-alignment").on( "click", "button", function(event) {
       textAlignment( event );
     });
@@ -76,7 +78,7 @@ MemeGen = (function() {
     // Font Size Control
     $( ".font-sizer" ).change(function(event) {
       var fontSize = event.currentTarget.value;
-      $(".meme .caption").css("font-size", fontSize + "px" );
+      $(".meme .caption").css("font-size", parseInt(fontSize) + "px" );
     });
 
     // Color picker binding
@@ -192,6 +194,18 @@ MemeGen = (function() {
       .css('transform', 'scale(2, 2)')
       .css('width', '1280px')
       .css('height', '640px');
+  }
+
+
+  function spinnerInit(){
+    $('.spinner .btn:first-of-type').on('click', function() {
+      $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
+      $(".spinner input").change();
+    });
+    $('.spinner .btn:last-of-type').on('click', function() {
+      $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+      $(".spinner input").change();
+    });
   }
 
 
