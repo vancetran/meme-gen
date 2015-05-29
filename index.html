@@ -24,7 +24,6 @@
   <div class="container">
     <!-- Example row of columns -->
     <h1>Meme Generator</h1>
-    <p>Yet another one.</p>
 
     <div class="row">
 
@@ -33,12 +32,12 @@
 
           <div class="caption">
             <label for="caption">Caption</label>
-            <input type="text" class="form-control" id="caption" value="If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward." placeholder="Caption">
+            <input type="text" class="form-control" id="caption" value="" placeholder="Caption">
           </div>
 
           <div class="source">
             <label for="source">Source</label>
-            <input type="text" class="form-control" id="source" value="Martin Luther King Jr." placeholder="Source">
+            <input type="text" class="form-control" id="source" value="" placeholder="Source">
           </div>
 
           <div class="file-input">
@@ -66,6 +65,34 @@
               <input type="text" class="overlay-color form-control" id="full-popover" value="rgba(0,0,0,0)" data-color-format="rgb">
             </div>
           </div>
+
+
+          <div class="text-alignment btn-group" role="group" aria-label="Horizontal Text Alignment">
+            <button type="button" class="halign-left btn btn-default" aria-label="Align Left">
+              <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="halign-center btn btn-default" aria-label="Align Center">
+              <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="halign-right btn btn-default" aria-label="Align Right">
+              <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+            </button>
+
+            <button type="button" class="valign-top btn btn-default" aria-label="Align Top">
+              <span class="glyphicon glyphicon-object-align-top" aria-hidden="true">Top</span>
+            </button>
+            <button type="button" class="valign-bottom btn btn-default" aria-label="Align Bottom">
+              <span class="glyphicon glyphicon-object-align-bottom" aria-hidden="true">Bottom</span>
+            </button>
+          </div>
+
+
+          <div>
+            <div class="group">
+              <label>Font Size</label>
+              <input type="number" class="font-sizer" value="32">
+            </div>
+          </div>
           
 
           <hr>
@@ -79,8 +106,11 @@
 
         <div id="meme-window" class="meme">
           <div class="overlay"></div>
-          <div class="caption">If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward.</div>
-          <div class="source">Martin Luther King Jr.</div>
+
+          <div class="caption-group">
+            <div class="caption"></div>
+            <div class="source"></div>
+          </div>
         </div>
       </div>
 
