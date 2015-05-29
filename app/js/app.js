@@ -73,25 +73,6 @@ MemeGen = (function() {
     });
 
 
-    $(".ac-top").click( function(e) {
-      e.preventDefault();
-      $(".meme .caption-group").removeClass("alignment bottom");
-      $(".meme .caption-group").removeClass("alignment middle");
-      $(".meme .caption-group").addClass("alignment top");
-    });
-    $(".ac-bottom").click( function(e) {
-      e.preventDefault();
-      $(".meme .caption-group").removeClass("alignment top");
-      $(".meme .caption-group").removeClass("alignment middle");
-      $(".meme .caption-group").addClass("alignment bottom");
-    });
-    $(".ac-middle").click( function(e) {
-      e.preventDefault();
-      $(".meme .caption-group").removeClass("alignment top");
-      $(".meme .caption-group").removeClass("alignment bottom");
-      $(".meme .caption-group").addClass("alignment middle");
-    });
-
     // Font Size Control
     $( ".font-sizer" ).change(function(event) {
       var fontSize = event.currentTarget.value;
@@ -104,8 +85,6 @@ MemeGen = (function() {
     colorPicker($("#control-wrapper .source-color"), $('#meme-window .source'), "color");
     colorPicker($("#control-wrapper .overlay-color"), $('#meme-window .overlay'), "background-color");
 
-    // colorPicker($("#control-wrapper .text-color"), $('#meme-window .source'), "color");
-
   }
 
   function randomQuote(){
@@ -117,11 +96,27 @@ MemeGen = (function() {
   }
 
   function textAlignment( event ){
+    var classList = event.currentTarget.classList;
+    var alignment;
+    var type = "";
 
-    var alignment = event.currentTarget.classList[0].replace("align-","");
-    var position;
+    for( var i = 0; i < classList.length; i++ ){
+      if( classList[i].indexOf("halign-") >= 0 ){
+        alignment = classList[i].replace("halign-","");
+        type = "halign";
+      }else if ( classList[i].indexOf("valign-") >= 0 ){
+        alignment = classList[i].replace("valign-","");
+        type = "valign";
+      }
+    }
 
-    $(".meme .caption, .meme .source").css("text-align", alignment);
+    if( type === "halign"){
+      $(".meme .caption, .meme .source").css("text-align", alignment);
+    }else {
+      $(".meme .caption-group").removeClass("alignment top");
+      $(".meme .caption-group").removeClass("alignment bottom");
+      $(".meme .caption-group").addClass("alignment "+alignment);
+    }
   }
 
   function colorPicker( picker, target, cssProperty ) {
