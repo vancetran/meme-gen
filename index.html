@@ -87,13 +87,16 @@
           </div>
 
 
-          <div>
-            <div class="group">
-              <label>Font Size</label>
-              <input type="number" class="font-sizer" value="32">
+          <div class="group">
+            <label>Font Size</label>
+            <div class="input-group spinner">              
+              <input type="text" class="form-control font-sizer" value="32">
+              <div class="input-group-btn-vertical">
+                <button class="btn btn-default" type="button" aria-label="Increase Font Size"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
+                <button class="btn btn-default" type="button" aria-label="Decrease Font Size"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+              </div>
             </div>
           </div>
-          
 
           <hr>
           <button type="button" class="btn btn-primary download-image">Download Image</button>
@@ -107,7 +110,7 @@
         <div id="meme-window" class="meme">
           <div class="overlay"></div>
 
-          <div class="caption-group">
+          <div class="caption-group alignment bottom">
             <div class="caption"></div>
             <div class="source"></div>
           </div>
