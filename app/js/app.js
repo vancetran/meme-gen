@@ -65,6 +65,12 @@ MemeGen = (function() {
       $(".meme .caption-group").addClass("alignment bottom");
     });
 
+    // Font Size Control
+    $( ".font-sizer" ).change(function(event) {
+      var fontSize = event.currentTarget.value;
+      $(".meme .caption").css("font-size", fontSize + "px" );
+    });
+
     // Color picker binding
     colorPicker($("#control-wrapper .background-color"), $('#meme-window'), "background-color");
     colorPicker($("#control-wrapper .text-color"), $('#meme-window .caption'), "color");
