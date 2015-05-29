@@ -4,7 +4,7 @@
 
 * Customize filename for image download
 * Font families and sizes
-* Persistent Logo, on/off
+* Persistent Logo, on/off. File upload logo. Start with default logo.
 * Text layouts. Title, credit/source
   - Centered, left, right / top or bottom aligned
 * Find way to render output at 2x "retina"
@@ -14,6 +14,7 @@
 
 * Twitter login/post
 * Size templates
+* Visualize how layers are arranged
 
 * Mobile/Touch Friendly
 * Try Gulp build process

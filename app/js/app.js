@@ -2,6 +2,25 @@ var MemeGen = MemeGen || {};
 
 MemeGen = (function() {
 
+  var quotes = [
+    {
+      source: "Taylor Swift",
+      quote: "Just shake it off."
+    },
+    {
+      source: "Martin Luther King, Jr.",
+      quote: "If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward."
+    },
+    {
+      source: "Jay Z",
+      quote: "I'm far from being god, but I work god damn hard."
+    },
+    {
+      source: "Neil deGrasse Tyson",
+      quote: "The good thing about science is that it's true whether or not you believe in it."
+    }
+  ];
+
   var swatches = {
     grayscaleSimple: ["black", "#333", "#666", "#ccc", "white"],
     ucBrandColors: ["#1295D8","#FFB511","#005581","#72CDF4", "#FFD200", "#FFE552", "#FF6E1B",
@@ -11,6 +30,8 @@ MemeGen = (function() {
   var swatchCombined = swatches.grayscaleSimple.concat(swatches.ucBrandColors);
 
   function init(){
+
+    randomQuote();
 
     // renderImage();
 
@@ -41,28 +62,34 @@ MemeGen = (function() {
       downloadImage();
     });
 
+
+
+
+
     // Text Alignment
-    $(".ac-left").click( function(e) {
-      e.preventDefault();
-      $(".meme .caption, .meme .source").css("text-align","left");
+
+    $(".text-alignment").on( "click", "button", function(event) {
+      textAlignment( event );
     });
-    $(".ac-center").click( function(e) {
-      e.preventDefault();
-      $(".meme .caption, .meme .source").css("text-align","center");
-    });
-    $(".ac-right").click( function(e) {
-      e.preventDefault();
-      $(".meme .caption, .meme .source").css("text-align","right");
-    });
+
+
     $(".ac-top").click( function(e) {
       e.preventDefault();
       $(".meme .caption-group").removeClass("alignment bottom");
+      $(".meme .caption-group").removeClass("alignment middle");
       $(".meme .caption-group").addClass("alignment top");
     });
     $(".ac-bottom").click( function(e) {
       e.preventDefault();
       $(".meme .caption-group").removeClass("alignment top");
+      $(".meme .caption-group").removeClass("alignment middle");
       $(".meme .caption-group").addClass("alignment bottom");
+    });
+    $(".ac-middle").click( function(e) {
+      e.preventDefault();
+      $(".meme .caption-group").removeClass("alignment top");
+      $(".meme .caption-group").removeClass("alignment bottom");
+      $(".meme .caption-group").addClass("alignment middle");
     });
 
     // Font Size Control
@@ -79,6 +106,22 @@ MemeGen = (function() {
 
     // colorPicker($("#control-wrapper .text-color"), $('#meme-window .source'), "color");
 
+  }
+
+  function randomQuote(){
+    var randomQ = quotes[Math.floor(Math.random()*quotes.length)];
+    $(".meme .caption").html(randomQ.quote);
+    $(".caption input").val(randomQ.quote);
+    $(".meme .source").html(randomQ.source);
+    $(".source input").val(randomQ.source);
+  }
+
+  function textAlignment( event ){
+
+    var alignment = event.currentTarget.classList[0].replace("align-","");
+    var position;
+
+    $(".meme .caption, .meme .source").css("text-align", alignment);
   }
 
   function colorPicker( picker, target, cssProperty ) {
