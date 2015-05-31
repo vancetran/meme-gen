@@ -3,7 +3,6 @@ app/bower_components
 .grunt/
 .tmp/
 build/
-fonts/
 
 *.sublime-project
 *.sublime-workspace
