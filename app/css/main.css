@@ -6700,7 +6700,7 @@ button.close {
 #meme-wrapper .meme .caption,
 #meme-wrapper .meme .source {
   color: #fff;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 #meme-wrapper .meme .caption {
   position: relative;
