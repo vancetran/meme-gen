@@ -20,14 +20,25 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Meme Generator</a>
+      </div>
+    </div>
+  </nav>
+
 
   <div class="container">
-    <!-- Example row of columns -->
-    <h1>Meme Generator</h1>
 
     <div class="row">
       <div id="meme-wrapper">
-        <strong>Preview</strong>
 
         <div id="meme-window" class="meme">
           <div class="overlay"></div>
@@ -44,89 +55,97 @@
       <div id="control-wrapper">
         <form role="form">
 
-          <div class="caption">
-            <label for="caption">Caption</label>
-            <input type="text" class="form-control" id="caption" value="" placeholder="Caption">
-          </div>
-
-          <div class="source">
-            <label for="source">Source</label>
-            <input type="text" class="form-control" id="source" value="" placeholder="Source">
-          </div>
-
-          <div class="checkbox">
-            <label>
-              <input class="quote-control" type="checkbox"> Quote marks
-            </label>
-          </div>
-
-          <div class="file-input">
-            <label for="exampleInputFile">Background Image</label>
-            <input type="file" id="exampleInputFile" onchange="MemeGen.readURL(this);">
-          </div>
-
-          <div class="color-input">
-
-            <div class="group">
-              <label for="exampleInputFile">Background Color</label>
-              <input type="text" class="background-color form-control" id="full-popover" value="#72CDF4" data-color-format="hex">
-            </div>
-            <div class="group">
-              <label for="exampleInputFile">Text Color</label>
-              <input type="text" class="text-color form-control" id="full-popover" value="#fff" data-color-format="hex">
+          <div class="col-md-4 first-col">
+            <div class="caption">
+              <label for="caption">Caption</label>
+              <textarea class="form-control" id="caption" value="" placeholder="Caption" rows="3"></textarea>
             </div>
 
-            <div class="group">
-              <label for="exampleInputFile">Source Color</label>
-              <input type="text" class="source-color form-control" id="full-popover" value="#fff" data-color-format="hex">
+            <div class="source">
+              <label for="source">Source</label>
+              <input type="text" class="form-control" id="source" value="" placeholder="Source">
             </div>
-            <div class="group">
-              <label for="exampleInputFile">Overlay Color</label>
-              <input type="text" class="overlay-color form-control" id="full-popover" value="rgba(0,0,0,0)" data-color-format="rgb">
-            </div>
+
+            <hr>
+
+            <button type="button" class="btn btn-primary download-image"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Image</button>
+            <button type="button" class="btn btn-default generate-image">Append Image</button>
+
           </div>
 
+          <div class="col-md-4 second-col">            
+            <div class="file-input">
+              <label for="exampleInputFile">Background Image</label>
+              <input type="file" id="exampleInputFile" onchange="MemeGen.readURL(this);">
+            </div>
 
-          <div class="text-alignment btn-group" role="group" aria-label="Horizontal Text Alignment">
-            <button type="button" class="halign-left btn btn-default" aria-label="Align Left" title="Align Left">
-              <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="halign-center btn btn-default" aria-label="Align Center" title="Align Center">
-              <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="halign-right btn btn-default" aria-label="Align Right" title="Align Right">
-              <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
-            </button>
+            <div class="color-input">
 
-            <button type="button" class="valign-top btn btn-default" aria-label="Align Top" title="Align Top">
-              <span class="glyphicon glyphicon-object-align-top" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="valign-bottom btn btn-default" aria-label="Align Bottom" title="Align Bottom">
-              <span class="glyphicon glyphicon-object-align-bottom" aria-hidden="true"></span>
-            </button>
+              <div class="group">
+                <label for="exampleInputFile">Background Color</label>
+                <input type="text" class="background-color form-control" id="full-popover" value="#72CDF4" data-color-format="hex">
+              </div>
+              <div class="group">
+                <label for="exampleInputFile">Text Color</label>
+                <input type="text" class="text-color form-control" id="full-popover" value="#fff" data-color-format="hex">
+              </div>
+
+              <div class="group">
+                <label for="exampleInputFile">Source Color</label>
+                <input type="text" class="source-color form-control" id="full-popover" value="#fff" data-color-format="hex">
+              </div>
+              <div class="group">
+                <label for="exampleInputFile">Overlay Color</label>
+                <input type="text" class="overlay-color form-control" id="full-popover" value="rgba(0,0,0,0)" data-color-format="rgb">
+              </div>
+
+            </div>
+
           </div>
+          <div class="col-md-4 third-col">
+            <label>Text Alignment</label>
+            <div class="text-alignment btn-group" role="group" aria-label="Horizontal Text Alignment">
+              <button type="button" class="halign-left btn btn-default" aria-label="Align Left" title="Align Left">
+                <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="halign-center btn btn-default" aria-label="Align Center" title="Align Center">
+                <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="halign-right btn btn-default" aria-label="Align Right" title="Align Right">
+                <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+              </button>
 
+              <button type="button" class="valign-top btn btn-default" aria-label="Align Top" title="Align Top">
+                <span class="glyphicon glyphicon-object-align-top" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="valign-bottom btn btn-default" aria-label="Align Bottom" title="Align Bottom">
+                <span class="glyphicon glyphicon-object-align-bottom" aria-hidden="true"></span>
+              </button>
+            </div>
 
-          <div class="group">
-            <label>Font Size</label>
-            <div class="input-group spinner">              
-              <input type="text" class="form-control font-sizer" value="60">
-              <div class="input-group-btn-vertical">
-                <button class="btn btn-default" type="button" aria-label="Increase Font Size"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
-                <button class="btn btn-default" type="button" aria-label="Decrease Font Size"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+            <div class="group">
+              <label style="clear: both">Font Size</label>
+              <div class="input-group spinner">              
+                <input type="text" class="form-control font-sizer" value="60">
+                <div class="input-group-btn-vertical">
+                  <button class="btn btn-default" type="button" aria-label="Increase Font Size"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
+                  <button class="btn btn-default" type="button" aria-label="Decrease Font Size"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+                </div>
               </div>
             </div>
+
+            <div class="checkbox">
+              <label>
+                <input class="quote-control" type="checkbox"> Quote marks
+              </label>
+            </div>
+
           </div>
 
-          <hr>
-          <button type="button" class="btn btn-primary download-image"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Image</button>
-          <button type="button" class="btn btn-primary generate-image">Append Image</button>
+        
         </form>
       </div>
     </div>
-
-
-    <hr>
 
     <footer>
     </footer>
