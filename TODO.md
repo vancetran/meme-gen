@@ -2,7 +2,8 @@
 
 ## Top
 
-* Customize filename for image download
+* Add option for curly quote marks
+* Customize filename for image download, based on first few words of quote
 * Font families and sizes
 * Persistent Logo, on/off. File upload logo. Start with default logo.
 * Text layouts. Title, credit/source

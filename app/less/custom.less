@@ -106,6 +106,17 @@ body {
       font-weight: bold;
       padding-bottom: .25em;
       z-index: 10;
+
+      &.quotemarks {
+        text-indent: -0.5em;
+
+        &:before {
+          content: "\201C";
+        }
+        &:after {
+          content: "\201D";
+        }
+      }
     }
     .source {
       position: relative;

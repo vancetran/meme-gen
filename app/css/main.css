@@ -6701,7 +6701,6 @@ button.close {
 #meme-wrapper .meme .source {
   color: #fff;
   font-family: Arial, sans-serif;
-  font-family: Kievit, sans-serif, Arial, sans-serif;
 }
 #meme-wrapper .meme .caption {
   position: relative;
@@ -6710,6 +6709,15 @@ button.close {
   font-weight: bold;
   padding-bottom: .25em;
   z-index: 10;
+}
+#meme-wrapper .meme .caption.quotemarks {
+  text-indent: -0.5em;
+}
+#meme-wrapper .meme .caption.quotemarks:before {
+  content: "\201C";
+}
+#meme-wrapper .meme .caption.quotemarks:after {
+  content: "\201D";
 }
 #meme-wrapper .meme .source {
   position: relative;

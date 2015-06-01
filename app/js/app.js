@@ -19,7 +19,7 @@ MemeGen = (function() {
       quote: "Just shake it off."
     },
     {
-      source: "Beyonce",
+      source: "Beyoncé",
       quote: "I woke up like this."
     },
     {
@@ -80,6 +80,11 @@ MemeGen = (function() {
     // Text Alignment
     $(".text-alignment").on( "click", "button", function(event) {
       textAlignment( event );
+    });
+
+    // Quote Marks
+    $(".quote-control").on( "click", function(event) {
+      $(".meme .caption").toggleClass("quotemarks");
     });
 
 

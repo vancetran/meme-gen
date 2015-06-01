@@ -57,6 +57,12 @@
             <input type="text" class="form-control" id="source" value="" placeholder="Source">
           </div>
 
+          <div class="checkbox">
+            <label>
+              <input class="quote-control" type="checkbox"> Quote marks
+            </label>
+          </div>
+
           <div class="file-input">
             <label for="exampleInputFile">Background Image</label>
             <input type="file" id="exampleInputFile" onchange="MemeGen.readURL(this);">
@@ -116,7 +122,7 @@
           </div>
 
           <hr>
-          <button type="button" class="btn btn-primary download-image">Download Image</button>
+          <button type="button" class="btn btn-primary download-image"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Image</button>
           <button type="button" class="btn btn-primary generate-image">Append Image</button>
         </form>
       </div>
