@@ -26,7 +26,21 @@
     <h1>Meme Generator</h1>
 
     <div class="row">
+      <div id="meme-wrapper">
+        <strong>Preview</strong>
 
+        <div id="meme-window" class="meme">
+          <div class="overlay"></div>
+
+          <div class="caption-group alignment bottom">
+            <div class="caption"></div>
+            <div class="source"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
       <div id="control-wrapper">
         <form role="form">
 
@@ -38,6 +52,12 @@
           <div class="source">
             <label for="source">Source</label>
             <input type="text" class="form-control" id="source" value="" placeholder="Source">
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input class="quote-control" type="checkbox"> Quote marks
+            </label>
           </div>
 
           <div class="file-input">
@@ -68,20 +88,20 @@
 
 
           <div class="text-alignment btn-group" role="group" aria-label="Horizontal Text Alignment">
-            <button type="button" class="halign-left btn btn-default" aria-label="Align Left">
+            <button type="button" class="halign-left btn btn-default" aria-label="Align Left" title="Align Left">
               <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
             </button>
-            <button type="button" class="halign-center btn btn-default" aria-label="Align Center">
+            <button type="button" class="halign-center btn btn-default" aria-label="Align Center" title="Align Center">
               <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
             </button>
-            <button type="button" class="halign-right btn btn-default" aria-label="Align Right">
+            <button type="button" class="halign-right btn btn-default" aria-label="Align Right" title="Align Right">
               <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
             </button>
 
-            <button type="button" class="valign-top btn btn-default" aria-label="Align Top">
+            <button type="button" class="valign-top btn btn-default" aria-label="Align Top" title="Align Top">
               <span class="glyphicon glyphicon-object-align-top" aria-hidden="true"></span>
             </button>
-            <button type="button" class="valign-bottom btn btn-default" aria-label="Align Bottom">
+            <button type="button" class="valign-bottom btn btn-default" aria-label="Align Bottom" title="Align Bottom">
               <span class="glyphicon glyphicon-object-align-bottom" aria-hidden="true"></span>
             </button>
           </div>
@@ -90,7 +110,7 @@
           <div class="group">
             <label>Font Size</label>
             <div class="input-group spinner">              
-              <input type="text" class="form-control font-sizer" value="32">
+              <input type="text" class="form-control font-sizer" value="60">
               <div class="input-group-btn-vertical">
                 <button class="btn btn-default" type="button" aria-label="Increase Font Size"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
                 <button class="btn btn-default" type="button" aria-label="Decrease Font Size"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
@@ -99,26 +119,12 @@
           </div>
 
           <hr>
-          <button type="button" class="btn btn-primary download-image">Download Image</button>
+          <button type="button" class="btn btn-primary download-image"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Image</button>
           <button type="button" class="btn btn-primary generate-image">Append Image</button>
         </form>
       </div>
-
-      <div id="meme-wrapper">
-        <strong>Preview</strong>
-
-        <div id="meme-window" class="meme">
-          <div class="overlay"></div>
-
-          <div class="caption-group alignment bottom">
-            <div class="caption"></div>
-            <div class="source"></div>
-          </div>
-        </div>
-      </div>
-
-
     </div>
+
 
     <hr>
 
