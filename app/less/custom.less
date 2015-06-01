@@ -2,7 +2,6 @@ body {
 }
 
 #control-wrapper {
-  .make-md-column(12);
 
   .caption {
     label { .text-hide; }
@@ -62,15 +61,21 @@ body {
     left: 4px;
   }
 
+  .third-col {
+    label{
+      margin-top: 20px;
+      display: block;
+    }
+  }
+
 }
 
 #meme-wrapper {
   .make-md-column(12);
-  height: 600px;
+  height: auto;
   #meme-window {
     position: relative;
     margin: 0 auto;
-
     color: black;
     background: #72CDF4;
     background-size: cover;

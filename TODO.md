@@ -3,6 +3,7 @@
 ## Top
 
 * Photo alignment settings
+  - clear out photo
 * Separate build path for branded generators
 * Customize filename for image download, based on first few words of quote
 * Font families and sizes

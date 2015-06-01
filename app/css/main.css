@@ -6580,18 +6580,6 @@ button.close {
   font-weight: 800;
   font-style: italic;
 }
-#control-wrapper {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 992px) {
-  #control-wrapper {
-    float: left;
-    width: 100%;
-  }
-}
 #control-wrapper .caption label {
   font: 0/0 a;
   color: transparent;
@@ -6663,12 +6651,16 @@ button.close {
   top: 4px;
   left: 4px;
 }
+#control-wrapper .third-col label {
+  margin-top: 20px;
+  display: block;
+}
 #meme-wrapper {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 600px;
+  height: auto;
 }
 @media (min-width: 992px) {
   #meme-wrapper {

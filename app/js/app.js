@@ -50,7 +50,7 @@ MemeGen = (function() {
     spinnerInit();
 
 
-    $( ".caption input" ).keyup(function() {
+    $( ".caption textarea" ).keyup(function() {
       var str = $( this ).val();
       $(".meme .caption").html(str);
     });
@@ -59,11 +59,6 @@ MemeGen = (function() {
       var str = $( this ).val();
       $(".meme .source").html(str);
     });
-
-    // $( ".color input#full-popover" ).css(function() {
-    //   var str = $( this ).val();
-    // });
-
 
     $("input.overlay-color").one("click", function() {
       $(this).trigger("colorpickersliders.updateColor", "rgba(0,0,0,0.5)");
@@ -105,7 +100,7 @@ MemeGen = (function() {
   function randomQuote(){
     var randomQ = quotes[Math.floor(Math.random()*quotes.length)];
     $(".meme .caption").html(randomQ.quote);
-    $(".caption input").val(randomQ.quote);
+    $(".caption textarea").val(randomQ.quote);
     $(".meme .source").html(randomQ.source);
     $(".source input").val(randomQ.source);
   }
