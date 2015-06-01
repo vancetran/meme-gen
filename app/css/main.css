@@ -6589,7 +6589,7 @@ button.close {
 @media (min-width: 992px) {
   #control-wrapper {
     float: left;
-    width: 41.66666666666667%;
+    width: 100%;
   }
 }
 #control-wrapper .caption label {
@@ -6668,25 +6668,25 @@ button.close {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  height: 600px;
 }
 @media (min-width: 992px) {
   #meme-wrapper {
     float: left;
-    width: 58.333333333333336%;
+    width: 100%;
   }
 }
 #meme-wrapper #meme-window {
-  position: absolute;
-  top: 20px;
-  right: 25px;
+  position: relative;
+  margin: 0 auto;
   color: black;
   background: #72CDF4;
   background-size: cover;
 }
 #meme-wrapper .meme {
   padding: 20px;
-  width: 640px;
-  height: 320px;
+  width: 999px;
+  height: 559px;
 }
 #meme-wrapper .meme .overlay {
   position: absolute;
@@ -6701,33 +6701,34 @@ button.close {
 #meme-wrapper .meme .source {
   color: #fff;
   font-family: Arial, sans-serif;
+  font-family: Kievit, sans-serif, Arial, sans-serif;
 }
 #meme-wrapper .meme .caption {
   position: relative;
-  line-height: 1.2em;
-  font-size: 32px;
+  line-height: 1.1em;
+  font-size: 60px;
   font-weight: bold;
   padding-bottom: .25em;
   z-index: 10;
 }
 #meme-wrapper .meme .source {
   position: relative;
-  font-size: 16px;
+  font-size: 32px;
   z-index: 10;
 }
 #meme-wrapper .meme .alignment.top {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
+  top: 40px;
+  left: 40px;
+  right: 40px;
   bottom: auto;
 }
 #meme-wrapper .meme .alignment.bottom {
   position: absolute;
   top: auto;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
 }
 #meme-wrapper .meme .alignment.middle {
   display: table;

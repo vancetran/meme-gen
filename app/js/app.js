@@ -7,6 +7,14 @@ MemeGen = (function() {
 
   var quotes = [
     {
+      source: "Temple Grandin",
+      quote: "I cannot emphasize enough the importance of a good teacher."
+    },
+    {
+      source: "Sally Ride",
+      quote: "You cannot be what you can't see."
+    },
+    {
       source: "Taylor Swift",
       quote: "Just shake it off."
     },

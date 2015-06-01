@@ -2,7 +2,7 @@ body {
 }
 
 #control-wrapper {
-  .make-md-column(5);
+  .make-md-column(12);
 
   .caption {
     label { .text-hide; }
@@ -65,12 +65,11 @@ body {
 }
 
 #meme-wrapper {
-  .make-md-column(7);
+  .make-md-column(12);
+  height: 600px;
   #meme-window {
-    // Blurry canvas fix
-    position: absolute;
-    top: 20px;
-    right: 25px;
+    position: relative;
+    margin: 0 auto;
 
     color: black;
     background: #72CDF4;
@@ -79,8 +78,8 @@ body {
 
   .meme {
     padding: 20px;
-    width: 640px;
-    height: 320px;
+    width: 999px;
+    height: 559px;
 
     .overlay {
       position: absolute;
@@ -93,35 +92,35 @@ body {
     }
 
     .caption-group {
+
     }
     .caption, .source {
       color: #fff;
       font-family: Arial, sans-serif;
-      //font-family: @kievit;
+      // font-family: @kievit, Arial, sans-serif;
     }
     .caption {
       position: relative;
-      line-height: 1.2em;
-      font-size: 32px;
+      line-height: 1.1em;
+      font-size: 60px;
       font-weight: bold;
       padding-bottom: .25em;
       z-index: 10;
     }
-
     .source {
       position: relative;
-      font-size: 16px;
+      font-size: 32px;
       z-index: 10;
     }
 
     .alignment {
       &.top {
         position: absolute;
-        top: 20px; left: 20px; right: 20px; bottom: auto;
+        top: 40px; left: 40px; right: 40px; bottom: auto;
       }
       &.bottom {
         position: absolute;
-        top: auto; left: 20px; right: 20px; bottom: 20px;
+        top: auto; left: 40px; right: 40px; bottom: 40px;
       }
       &.middle {
         display: table;
