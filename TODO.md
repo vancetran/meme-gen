@@ -2,13 +2,11 @@
 
 ## Top
 
-* Add option for curly quote marks
+* Photo alignment settings
+* Separate build path for branded generators
 * Customize filename for image download, based on first few words of quote
 * Font families and sizes
 * Persistent Logo, on/off. File upload logo. Start with default logo.
-* Text layouts. Title, credit/source
-  - Centered, left, right / top or bottom aligned
-* Find way to render output at 2x "retina"
 * Cleanup
 
 ## Extra
@@ -16,7 +14,6 @@
 * Twitter login/post
 * Size templates
 * Visualize how layers are arranged
-
 * Mobile/Touch Friendly
 * Try Gulp build process
 * Direct entry into the preview itself
@@ -43,14 +40,16 @@ exports.getBounds = function(node) {
 };
 ```
 
-## Shelved
+## Done
 
+* font sizing
+* Add option for curly quote marks
+* Find way to render output at 2x "retina"
 * Render at 2x "retina" by default. Twitter, et al will scale as needed [Handle retina screens][6]
   - Will need to redo the layout as a result
   - Note: Twitter dimensions, 1024 x 512 expanded, 506 x 253 collapsed
-
-## Done
-
+* Text layouts. Title, credit/source
+  - Centered, left, right / top or bottom aligned
 * Overlay Color onClick should set alpha to 0.5
 * [Fix blurry canvas/rendered image output][3]
   * position meme container absolutely by at least two positional properties
