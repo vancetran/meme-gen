@@ -49,10 +49,6 @@ MemeGen = (function() {
 
   var init = function(){
 
-    $meme = $("#meme-window");
-    $download = $(".download-image");
-
-    $download.on('click', onDownloadClick);
 
     randomQuote();
     spinnerInit();
@@ -70,6 +66,14 @@ MemeGen = (function() {
 
     $("input.overlay-color").one("click", function() {
       $(this).trigger("colorpickersliders.updateColor", "rgba(0,0,0,0.5)");
+    });
+
+    $(".generate-image").click( function() {
+      renderImage();
+    });
+
+    $(".download-image").click( function() {
+      downloadImage();
     });
 
     // Text Alignment
@@ -95,17 +99,17 @@ MemeGen = (function() {
     colorPicker($("#control-wrapper .source-color"), $('#meme-window .source'), "color");
     colorPicker($("#control-wrapper .overlay-color"), $('#meme-window .overlay'), "background-color");
 
-  };
+  }
 
-  var randomQuote = function(){
+  function randomQuote(){
     var randomQ = exampleQuotes[Math.floor(Math.random()*exampleQuotes.length)];
     $(".meme .caption").text(randomQ.quote);
     $(".caption textarea").val(randomQ.quote);
     $(".meme .source").text(randomQ.source);
     $(".source input").val(randomQ.source);
-  };
+  }
 
-  var textAlignment = function( event ){
+  function textAlignment( event ){
     var classList = event.currentTarget.classList;
     var alignment;
     var type = "";
@@ -127,9 +131,9 @@ MemeGen = (function() {
       $(".meme .caption-group").removeClass("alignment bottom");
       $(".meme .caption-group").addClass("alignment "+alignment);
     }
-  };
+  }
 
-  var colorPicker = function( picker, target, cssProperty ) {
+  function colorPicker( picker, target, cssProperty ) {
     picker.ColorPickerSliders({
       // color: '#1295D8',
       placement: 'auto bottom',
@@ -161,9 +165,9 @@ MemeGen = (function() {
 
       }
     });
-  };
+  }
 
-  var readURL = function(input) {
+  function readURL(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
 
@@ -176,6 +180,7 @@ MemeGen = (function() {
 
       reader.readAsDataURL(input.files[0]);
     }
+
   };
 
   var slugify = function(text){
@@ -192,29 +197,36 @@ MemeGen = (function() {
 
     var a = $('<a>').attr('href', dataUrl).attr('download', 'meme-' + filename + '.png').appendTo('body');
 
-    a[0].click();
-
-    a.remove();
-
-    $('#download').attr('href', dataUrl).attr('target', '_blank');
-    $('#download').trigger('click');
   };
 
 
-  var onDownloadClick =  function() {
-    getImage(downloadImage);
-  };
-
-  var getImage = function( callback ) {
-    html2canvas( $meme, {
+  var renderImage = function() {
+    html2canvas( document.getElementById("meme-window"), {
       onrendered: function(canvas) {
-        var dataUrl = canvas.toDataURL();
-        callback(dataUrl);
+        // $("footer").html(canvas);
+        document.body.appendChild(canvas);
       }
     });
-  };
+  }
 
-  var spinnerInit = function(){
+  var downloadImage = function() {
+    html2canvas( document.getElementById("meme-window"), {
+      onrendered: function(canvas) {
+        canvas.toBlob(function(blob) {
+          saveAs(blob, "dat-image.png");
+        });
+          }
+    });
+  }
+
+  function retinaSize() {
+    $('#meme-window')
+      .css('transform', 'scale(2, 2)')
+      .css('width', '1280px')
+      .css('height', '640px');
+  }
+
+  function spinnerInit(){
     $('.spinner .btn:first-of-type').on('click', function() {
       $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
       $(".spinner input").change();
@@ -223,7 +235,7 @@ MemeGen = (function() {
       $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
       $(".spinner input").change();
     });
-  };
+  }
 
 
   // Public Interface
