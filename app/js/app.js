@@ -48,11 +48,6 @@ MemeGen = (function() {
 
   function init(){
 
-    $meme = $("#meme-window");
-    $download = $(".download-image");
-
-    $download.on('click', onDownloadClick);
-
     randomQuote();
     spinnerInit();
 
@@ -201,7 +196,6 @@ MemeGen = (function() {
       .css('width', '1280px')
       .css('height', '640px');
   }
-
 
   function spinnerInit(){
     $('.spinner .btn:first-of-type').on('click', function() {
