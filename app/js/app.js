@@ -5,7 +5,7 @@ MemeGen = (function() {
   var config = {
   };
 
-  var quotes = [
+  var exampleQuotes = [
     {
       source: "Temple Grandin",
       quote: "I cannot emphasize enough the importance of a good teacher."
@@ -52,12 +52,12 @@ MemeGen = (function() {
 
     $( ".caption textarea" ).keyup(function() {
       var str = $( this ).val();
-      $(".meme .caption").html(str);
+      $(".meme .caption").text(str);
     });
 
     $( ".source input" ).keyup(function() {
       var str = $( this ).val();
-      $(".meme .source").html(str);
+      $(".meme .source").text(str);
     });
 
     $("input.overlay-color").one("click", function() {
@@ -86,7 +86,7 @@ MemeGen = (function() {
     // Font Size Control
     $( ".font-sizer" ).change(function(event) {
       var fontSize = event.currentTarget.value;
-      $(".meme .caption").css("font-size", parseInt(fontSize) + "px" );
+      $(".meme .caption").css("font-size", parseInt(fontSize, 10) + "px" );
     });
 
     // Color picker binding
@@ -98,10 +98,10 @@ MemeGen = (function() {
   }
 
   function randomQuote(){
-    var randomQ = quotes[Math.floor(Math.random()*quotes.length)];
-    $(".meme .caption").html(randomQ.quote);
+    var randomQ = exampleQuotes[Math.floor(Math.random()*exampleQuotes.length)];
+    $(".meme .caption").text(randomQ.quote);
     $(".caption textarea").val(randomQ.quote);
-    $(".meme .source").html(randomQ.source);
+    $(".meme .source").text(randomQ.source);
     $(".source input").val(randomQ.source);
   }
 
