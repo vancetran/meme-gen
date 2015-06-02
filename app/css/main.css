@@ -6655,6 +6655,22 @@ button.close {
   margin-top: 20px;
   display: block;
 }
+#control-wrapper .first-col,
+#control-wrapper .second-col,
+#control-wrapper .third-col {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  #control-wrapper .first-col,
+  #control-wrapper .second-col,
+  #control-wrapper .third-col {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
 #meme-wrapper {
   position: relative;
   min-height: 1px;
