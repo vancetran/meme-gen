@@ -6,6 +6,7 @@ MemeGen = (function() {
   };
 
   var $meme = null;
+  var $download = null;
 
   var exampleQuotes = [
     {
@@ -177,10 +178,19 @@ MemeGen = (function() {
     }
   };
 
-  var downloadImage = function(dataUrl) {
-    var filename = "meme-image";
+  var slugify = function(text){
+    return text
+        .toLowerCase()
+        .replace(/[^\w ]+/g,'')
+        .replace(/ +/g,'-');
+  };
 
-    var a = $('<a>').attr('href', dataUrl).attr('download', 'quote-' + filename + '.png').appendTo('body');
+  var downloadImage = function(dataUrl) {
+
+    var quote = $('#meme-window .caption').text().split(' ', 5);
+    var filename = slugify(quote.join(' '));
+
+    var a = $('<a>').attr('href', dataUrl).attr('download', 'meme-' + filename + '.png').appendTo('body');
 
     a[0].click();
 
