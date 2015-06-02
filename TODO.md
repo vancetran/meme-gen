@@ -6,8 +6,12 @@
   - clear out photo
 * Separate build path for branded generators
 * Customize filename for image download, based on first few words of quote
+* Add a vertical middle alignment option
 * Font families and sizes
 * Persistent Logo, on/off. File upload logo. Start with default logo.
+* Different Aspect ratios for Twitter and Instagram
+* Resize and Opacity sliders
+* 2x the Image on Output, rather than just resizing the meme window
 * Cleanup
 
 ## Extra

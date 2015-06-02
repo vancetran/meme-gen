@@ -6670,7 +6670,6 @@ button.close {
 }
 #meme-wrapper #meme-window {
   position: relative;
-  margin: 0 auto;
   color: black;
   background: #72CDF4;
   background-size: cover;
@@ -6734,4 +6733,8 @@ button.close {
   display: table;
   height: auto;
   text-align: center;
+}
+footer {
+  margin-top: 100px;
+  padding: 20px 0;
 }
