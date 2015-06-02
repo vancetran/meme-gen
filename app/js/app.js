@@ -44,7 +44,7 @@ MemeGen = (function() {
 
   var swatchCombined = swatches.grayscaleSimple.concat(swatches.ucBrandColors);
 
-  function init(){
+  var init = function(){
 
     randomQuote();
     spinnerInit();
@@ -95,17 +95,17 @@ MemeGen = (function() {
     colorPicker($("#control-wrapper .source-color"), $('#meme-window .source'), "color");
     colorPicker($("#control-wrapper .overlay-color"), $('#meme-window .overlay'), "background-color");
 
-  }
+  };
 
-  function randomQuote(){
+  var randomQuote = function(){
     var randomQ = exampleQuotes[Math.floor(Math.random()*exampleQuotes.length)];
     $(".meme .caption").text(randomQ.quote);
     $(".caption textarea").val(randomQ.quote);
     $(".meme .source").text(randomQ.source);
     $(".source input").val(randomQ.source);
-  }
+  };
 
-  function textAlignment( event ){
+  var textAlignment = function( event ){
     var classList = event.currentTarget.classList;
     var alignment;
     var type = "";
@@ -129,7 +129,7 @@ MemeGen = (function() {
     }
   }
 
-  function colorPicker( picker, target, cssProperty ) {
+  var colorPicker = function( picker, target, cssProperty ) {
     picker.ColorPickerSliders({
       // color: '#1295D8',
       placement: 'auto bottom',
@@ -163,7 +163,7 @@ MemeGen = (function() {
     });
   }
 
-  function readURL(input) {
+  var readURL = function(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
 
@@ -178,7 +178,7 @@ MemeGen = (function() {
     }
   }
 
-  function renderImage() {
+  var renderImage = function() {
     html2canvas( document.getElementById("meme-window"), {
       onrendered: function(canvas) {
         // $("footer").html(canvas);
@@ -187,7 +187,7 @@ MemeGen = (function() {
     });
   }
 
-  function downloadImage() {
+  var downloadImage = function() {
     html2canvas( document.getElementById("meme-window"), {
       onrendered: function(canvas) {
         canvas.toBlob(function(blob) {
@@ -197,15 +197,7 @@ MemeGen = (function() {
     });
   }
 
-  function retinaSize() {
-    $('#meme-window')
-      .css('transform', 'scale(2, 2)')
-      .css('width', '1280px')
-      .css('height', '640px');
-  }
-
-
-  function spinnerInit(){
+  var spinnerInit = function(){
     $('.spinner .btn:first-of-type').on('click', function() {
       $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
       $(".spinner input").change();
