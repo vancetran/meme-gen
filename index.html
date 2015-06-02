@@ -55,7 +55,7 @@
       <div id="control-wrapper">
         <form role="form">
 
-          <div class="col-md-4 first-col">
+          <div class="first-col">
             <div class="caption">
               <label for="caption">Caption</label>
               <textarea class="form-control" id="caption" value="" placeholder="Caption" rows="3"></textarea>
@@ -69,11 +69,10 @@
             <hr>
 
             <button type="button" class="btn btn-primary download-image"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download Image</button>
-            <button type="button" class="btn btn-default generate-image">Append Image</button>
 
           </div>
 
-          <div class="col-md-4 second-col">            
+          <div class="second-col">            
             <div class="file-input">
               <label for="exampleInputFile">Background Image</label>
               <input type="file" id="exampleInputFile" onchange="MemeGen.readURL(this);">
@@ -102,7 +101,7 @@
             </div>
 
           </div>
-          <div class="col-md-4 third-col">
+          <div class="third-col">
             <label>Text Alignment</label>
             <div class="text-alignment btn-group" role="group" aria-label="Horizontal Text Alignment">
               <button type="button" class="halign-left btn btn-default" aria-label="Align Left" title="Align Left">
