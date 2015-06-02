@@ -5,6 +5,8 @@ MemeGen = (function() {
   var config = {
   };
 
+  var $meme = null;
+
   var exampleQuotes = [
     {
       source: "Temple Grandin",
@@ -46,6 +48,11 @@ MemeGen = (function() {
 
   var init = function(){
 
+    $meme = $("#meme-window");
+    $download = $(".download-image");
+
+    $download.on('click', onDownloadClick);
+
     randomQuote();
     spinnerInit();
 
@@ -62,14 +69,6 @@ MemeGen = (function() {
 
     $("input.overlay-color").one("click", function() {
       $(this).trigger("colorpickersliders.updateColor", "rgba(0,0,0,0.5)");
-    });
-
-    $(".generate-image").click( function() {
-      renderImage();
-    });
-
-    $(".download-image").click( function() {
-      downloadImage();
     });
 
     // Text Alignment
@@ -127,7 +126,7 @@ MemeGen = (function() {
       $(".meme .caption-group").removeClass("alignment bottom");
       $(".meme .caption-group").addClass("alignment "+alignment);
     }
-  }
+  };
 
   var colorPicker = function( picker, target, cssProperty ) {
     picker.ColorPickerSliders({
@@ -161,7 +160,7 @@ MemeGen = (function() {
 
       }
     });
-  }
+  };
 
   var readURL = function(input) {
     if (input.files && input.files[0]) {
@@ -176,26 +175,34 @@ MemeGen = (function() {
 
       reader.readAsDataURL(input.files[0]);
     }
-  }
+  };
 
-  var renderImage = function() {
-    html2canvas( document.getElementById("meme-window"), {
+  var downloadImage = function(dataUrl) {
+    var filename = "meme-image";
+
+    var a = $('<a>').attr('href', dataUrl).attr('download', 'quote-' + filename + '.png').appendTo('body');
+
+    a[0].click();
+
+    a.remove();
+
+    $('#download').attr('href', dataUrl).attr('target', '_blank');
+    $('#download').trigger('click');
+  };
+
+
+  var onDownloadClick =  function() {
+    getImage(downloadImage);
+  };
+
+  var getImage = function( callback ) {
+    html2canvas( $meme, {
       onrendered: function(canvas) {
-        // $("footer").html(canvas);
-        document.body.appendChild(canvas);
+        var dataUrl = canvas.toDataURL();
+        callback(dataUrl);
       }
     });
-  }
-
-  var downloadImage = function() {
-    html2canvas( document.getElementById("meme-window"), {
-      onrendered: function(canvas) {
-        canvas.toBlob(function(blob) {
-          saveAs(blob, "dat-image.png");
-        });
-          }
-    });
-  }
+  };
 
   var spinnerInit = function(){
     $('.spinner .btn:first-of-type').on('click', function() {
@@ -206,7 +213,7 @@ MemeGen = (function() {
       $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
       $(".spinner input").change();
     });
-  }
+  };
 
 
   // Public Interface
