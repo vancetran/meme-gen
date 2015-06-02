@@ -5,8 +5,6 @@ MemeGen = (function() {
   var config = {
   };
 
-  var $meme = null;
-
   var exampleQuotes = [
     {
       source: "Temple Grandin",
@@ -46,7 +44,8 @@ MemeGen = (function() {
 
   var swatchCombined = swatches.grayscaleSimple.concat(swatches.ucBrandColors);
 
-  function init(){
+  var init = function(){
+
 
     randomQuote();
     spinnerInit();
@@ -64,6 +63,14 @@ MemeGen = (function() {
 
     $("input.overlay-color").one("click", function() {
       $(this).trigger("colorpickersliders.updateColor", "rgba(0,0,0,0.5)");
+    });
+
+    $(".generate-image").click( function() {
+      renderImage();
+    });
+
+    $(".download-image").click( function() {
+      downloadImage();
     });
 
     // Text Alignment
@@ -121,7 +128,7 @@ MemeGen = (function() {
       $(".meme .caption-group").removeClass("alignment bottom");
       $(".meme .caption-group").addClass("alignment "+alignment);
     }
-  };
+  }
 
   function colorPicker( picker, target, cssProperty ) {
     picker.ColorPickerSliders({
@@ -155,7 +162,7 @@ MemeGen = (function() {
 
       }
     });
-  };
+  }
 
   function readURL(input) {
     if (input.files && input.files[0]) {
@@ -170,9 +177,9 @@ MemeGen = (function() {
 
       reader.readAsDataURL(input.files[0]);
     }
-  };
+  }
 
-  function renderImage() {
+  var renderImage = function() {
     html2canvas( document.getElementById("meme-window"), {
       onrendered: function(canvas) {
         // $("footer").html(canvas);
@@ -181,14 +188,15 @@ MemeGen = (function() {
     });
   }
 
-  function downloadImage() {
+  var downloadImage = function() {
     html2canvas( document.getElementById("meme-window"), {
       onrendered: function(canvas) {
-        var dataUrl = canvas.toDataURL();
-        callback(dataUrl);
-      }
+        canvas.toBlob(function(blob) {
+          saveAs(blob, "dat-image.png");
+        });
+          }
     });
-  };
+  }
 
   function retinaSize() {
     $('#meme-window')
@@ -206,7 +214,7 @@ MemeGen = (function() {
       $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
       $(".spinner input").change();
     });
-  };
+  }
 
 
   // Public Interface
