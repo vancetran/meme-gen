@@ -41,6 +41,7 @@
       <div id="meme-wrapper">
 
         <div id="meme-window" class="meme">
+          <div id="logo-overlay"><img src="images/logo-md.png"></div>
           <div class="overlay"></div>
 
           <div class="caption-group alignment bottom">
@@ -125,7 +126,7 @@
             <div class="group">
               <label style="clear: both">Font Size</label>
               <div class="input-group spinner">              
-                <input type="text" class="form-control font-sizer" value="60">
+                <input type="text" class="form-control font-sizer" value="50">
                 <div class="input-group-btn-vertical">
                   <button class="btn btn-default" type="button" aria-label="Increase Font Size"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
                   <button class="btn btn-default" type="button" aria-label="Decrease Font Size"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
@@ -135,9 +136,44 @@
 
             <div class="checkbox">
               <label>
-                <input class="quote-control" type="checkbox"> Quote marks
+                <input id="quotemarks-toggle" type="checkbox"> Quotemarks
               </label>
             </div>
+
+            <label>Logo Alignment</label>
+            <div id="logo-alignment" class="btn-group" role="group" aria-label="Logo Alignment">
+              <button type="button" class="lalign-tl btn btn-default" aria-label="Align Top Left" title="Align Top Left">
+                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="lalign-tr btn btn-default" aria-label="Align Top Right" title="Align Top Right">
+                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="lalign-bl btn btn-default" aria-label="Align Bottom Left" title="Align Bottom Left">
+                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="lalign-br btn btn-default" aria-label="Align Bottom Right" title="Align Bottom Right">
+                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input id="logo-toggle" type="checkbox" checked> Logo
+              </label>
+            </div>
+
+            <!-- <label>Logo Size</label>
+            <div id="logo-size" class="btn-group" role="group" aria-label="Horizontal Text Alignment">
+              <button type="button" class="lsize-sm btn btn-default" aria-label="Align Left" title="Align Left">
+                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="lsize-md btn btn-default" aria-label="Align Center" title="Align Center">
+                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="lsize-lg btn btn-default" aria-label="Align Right" title="Align Right">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+            </div> -->
 
           </div>
 
