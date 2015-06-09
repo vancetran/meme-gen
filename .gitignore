@@ -6,7 +6,7 @@ build/
 
 # UC Specific stuff
 app/fonts/kievit
-app/images/
+app/images/uc
 
 *.sublime-project
 *.sublime-workspace
