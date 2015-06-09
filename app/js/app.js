@@ -39,13 +39,13 @@ MemeGen = (function() {
     }
   ];
 
-  var swatches = {
+  var colorSwatches = {
     grayscaleSimple: ["black", "#333", "#666", "#ccc", "white"],
     ucBrandColors: ["#1295D8","#FFB511","#005581","#72CDF4", "#FFD200", "#FFE552", "#FF6E1B",
       "#FF8F28", "#E44C9A", "#FEB2E0", "#00778B", "#00A3AD", "#7C7E7F", "#8F8884", "#BEB6AF", "#DBD5CD", "#B4975A"]
   };
 
-  var swatchCombined = swatches.grayscaleSimple.concat(swatches.ucBrandColors);
+  var colorSwatchesCombined = colorSwatches.grayscaleSimple.concat(colorSwatches.ucBrandColors);
 
   var init = function(){
 
@@ -95,6 +95,17 @@ MemeGen = (function() {
     colorPicker($("#control-wrapper .source-color"), $('#meme-window .source'), "color");
     colorPicker($("#control-wrapper .overlay-color"), $('#meme-window .overlay'), "background-color");
 
+
+    // Logo Alignment
+    $("#logo-alignment").on( "click", "button", function(event) {
+      logoAlignment( event );
+    });
+
+    // Logo Size
+    $("#logo-size").on( "click", "button", function(event) {
+      logoSize( event );
+    });
+
   };
 
   var randomQuote = function(){
@@ -129,13 +140,44 @@ MemeGen = (function() {
     }
   };
 
+  var logoAlignment = function( event ){
+    var classList = event.currentTarget.classList;
+    var alignment;
+
+    for( var i = 0; i < classList.length; i++ ){
+      if( classList[i].indexOf("lalign-") >= 0 ){
+        alignment = classList[i].replace("lalign-","");
+      }
+    }
+
+    $("#logo-overlay").removeClass();
+    $("#logo-overlay").addClass("align-" + alignment);
+  };
+
+  var logoSize = function( event ){
+    var classList = event.currentTarget.classList;
+    var size;
+
+    for( var i = 0; i < classList.length; i++ ){
+      if( classList[i].indexOf("lsize-") >= 0 ){
+        size = classList[i].replace("lsize-","");
+      }
+    }
+
+    $("#logo-overlay").removeClass("logo-sm");
+    $("#logo-overlay").removeClass("logo-md");
+    $("#logo-overlay").removeClass("logo-lg");
+
+    $("#logo-overlay").addClass("logo-" + size);
+  };
+
   var colorPicker = function( picker, target, cssProperty ) {
     picker.ColorPickerSliders({
       // color: '#1295D8',
       placement: 'auto bottom',
       hsvpanel: true,
       previewformat: 'hex',
-      swatches: swatchCombined,
+      swatches: colorSwatchesCombined,
       customswatches: false,
       sliders: false,
 

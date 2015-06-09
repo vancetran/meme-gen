@@ -98,6 +98,39 @@ body {
       background-color: rgba(0,0,0,0);
       z-index: 3;
     }
+    #logo-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url('../images/logo-md.png');
+      background-position: top+40px left+40px;
+      background-repeat: no-repeat;
+
+      &.logo-sm {
+        background-image: url('../images/logo-sm.png');
+      }
+      &.logo-md {
+        background-image: url('../images/logo-md.png');
+      }
+      &.logo-lg {
+        background-image: url('../images/logo-lg.png');
+      }
+
+      &.align-tl {
+        background-position: top+40px left+40px;
+      }
+      &.align-tr {
+        background-position: top+40px right+40px;
+      }
+      &.align-bl {
+        background-position: bottom+40px left+40px;
+      }
+      &.align-br {
+        background-position: bottom+40px right+40px;
+      }
+    }
 
     .caption-group {
 
