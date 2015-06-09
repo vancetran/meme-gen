@@ -6706,34 +6706,36 @@ button.close {
 }
 #meme-wrapper .meme #logo-overlay {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   top: 0;
   left: 0;
-  background-image: url('../images/logo-md.png');
-  background-position: top 40px left 40px;
-  background-repeat: no-repeat;
-}
-#meme-wrapper .meme #logo-overlay.logo-sm {
-  background-image: url('../images/logo-sm.png');
-}
-#meme-wrapper .meme #logo-overlay.logo-md {
-  background-image: url('../images/logo-md.png');
-}
-#meme-wrapper .meme #logo-overlay.logo-lg {
-  background-image: url('../images/logo-lg.png');
+  z-index: 4;
+  padding: 40px;
 }
 #meme-wrapper .meme #logo-overlay.align-tl {
-  background-position: top 40px left 40px;
+  right: auto;
+  bottom: auto;
+  top: 0;
+  left: 0;
 }
 #meme-wrapper .meme #logo-overlay.align-tr {
-  background-position: top 40px right 40px;
+  left: auto;
+  bottom: auto;
+  top: 0;
+  right: 0;
 }
 #meme-wrapper .meme #logo-overlay.align-bl {
-  background-position: bottom 40px left 40px;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
 }
 #meme-wrapper .meme #logo-overlay.align-br {
-  background-position: bottom 40px right 40px;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
 }
 #meme-wrapper .meme .caption,
 #meme-wrapper .meme .source {

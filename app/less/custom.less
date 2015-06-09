@@ -100,35 +100,54 @@ body {
     }
     #logo-overlay {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: auto;
+      height: auto;
       top: 0;
       left: 0;
-      background-image: url('../images/logo-md.png');
-      background-position: top+40px left+40px;
-      background-repeat: no-repeat;
+      z-index:4;
 
-      &.logo-sm {
-        background-image: url('../images/logo-sm.png');
-      }
-      &.logo-md {
-        background-image: url('../images/logo-md.png');
-      }
-      &.logo-lg {
-        background-image: url('../images/logo-lg.png');
-      }
+      padding: 40px;
+      // background-image: url('../images/logo-md.png');
+      // background-position: top+40px left+40px;
+      // background-repeat: no-repeat;
+
+      // &.logo-sm {
+      //   background-image: url('../images/logo-sm.png');
+      // }
+      // &.logo-md {
+      //   background-image: url('../images/logo-md.png');
+      // }
+      // &.logo-lg {
+      //   background-image: url('../images/logo-lg.png');
+      // }
 
       &.align-tl {
-        background-position: top+40px left+40px;
+        right: auto;
+        bottom: auto;
+
+        top: 0;
+        left: 0;
       }
       &.align-tr {
-        background-position: top+40px right+40px;
+        left: auto;
+        bottom: auto;
+
+        top: 0;
+        right: 0;
       }
       &.align-bl {
-        background-position: bottom+40px left+40px;
+        top: auto;
+        right: auto;
+
+        bottom: 0;
+        left: 0;
       }
       &.align-br {
-        background-position: bottom+40px right+40px;
+        top: auto;
+        left: auto;
+
+        bottom: 0;
+        right: 0;
       }
     }
 
