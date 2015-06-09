@@ -78,7 +78,7 @@ MemeGen = (function() {
     });
 
     // Quote Marks
-    $(".quote-control").on( "click", function(event) {
+    $("#quotemarks-toggle").on( "click", function(event) {
       $(".meme .caption").toggleClass("quotemarks");
     });
 
@@ -104,6 +104,11 @@ MemeGen = (function() {
     // Logo Size
     $("#logo-size").on( "click", "button", function(event) {
       logoSize( event );
+    });
+
+    // Logo Toggle
+    $("#logo-toggle").on( "click", function(event) {
+      $("#logo-overlay").toggle();
     });
 
   };

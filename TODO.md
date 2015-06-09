@@ -2,16 +2,16 @@
 
 ## Top
 
+* Overlay Logo, on/off. File upload logo. Start with default logo.
+* 2x the Image on Output, rather than just resizing the meme window
+* Separate build path for branded generators
+* Persist settings in cookies or HTML5LocalStorage
 * Photo alignment settings
   - clear out photo
-* Separate build path for branded generators
-* Customize filename for image download, based on first few words of quote
 * Add a vertical middle alignment option
 * Font families and sizes
-* Persistent Logo, on/off. File upload logo. Start with default logo.
 * Different Aspect ratios for Twitter and Instagram
 * Resize and Opacity sliders
-* 2x the Image on Output, rather than just resizing the meme window
 * Cleanup
 
 ## Extra
@@ -47,6 +47,7 @@ exports.getBounds = function(node) {
 
 ## Done
 
+* Customize filename for image download, based on first few words of quote
 * font sizing
 * Add option for curly quote marks
 * Find way to render output at 2x "retina"
