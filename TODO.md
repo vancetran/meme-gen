@@ -2,6 +2,8 @@
 
 ## Top
 
+* Look into Angular.js + Snap.svg, and [CardKit](https://github.com/times/cardkit)
+
 * Overlay Logo, on/off. File upload logo. Start with default logo.
 * 2x the Image on Output, rather than just resizing the meme window
 * Separate build path for branded generators
