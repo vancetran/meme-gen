@@ -5,6 +5,7 @@
 * Overlay Logo, on/off. File upload logo. Start with default logo.
 * 2x the Image on Output, rather than just resizing the meme window
 * Separate build path for branded generators
+* Allow for line break tags, but prevent all other tags.
 * Persist settings in cookies or HTML5LocalStorage
 * Photo alignment settings
   - clear out photo

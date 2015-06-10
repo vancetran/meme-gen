@@ -1,7 +1,7 @@
 Meme Gen
 ============
 
-A tool for easy meme generation to share on those social things, written in JavaScript. Inspired by [Vox Media's Meme tool](https://github.com/voxmedia/meme) and [Pixelcite](https://github.com/onyxfish/pixelcite).
+A tool that helps make meme images easily for sharing on social media, written in JavaScript. Inspired by [Vox Media's Meme tool](https://github.com/voxmedia/meme) and [Pixelcite](https://github.com/onyxfish/pixelcite).
 
 ## Installation for Development
 

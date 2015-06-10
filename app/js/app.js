@@ -22,7 +22,7 @@ MemeGen = (function() {
       quote: "Just shake it off."
     },
     {
-      source: "Beyoncé",
+      source: "Beyonce",
       quote: "I woke up like this."
     },
     {
@@ -36,6 +36,14 @@ MemeGen = (function() {
     {
       source: "Neil deGrasse Tyson",
       quote: "The good thing about science is that it's true whether or not you believe in it."
+    },
+    {
+      source: "Dr. Ian Malcom, Jurassic Park",
+      quote: "Life, uh... finds a way."
+    },
+    {
+      source: "Hodor",
+      quote: "Hodor"
     }
   ];
 
